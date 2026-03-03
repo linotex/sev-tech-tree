@@ -5,7 +5,7 @@
       <input
         v-model="store.searchQuery"
         class="search"
-        placeholder="Пошук: технологія, компонент, споруда..."
+        :placeholder="t('search_placeholder')"
         @input="store.filterGroup = null; store.filterCategory = null"
       />
       <button v-if="store.searchQuery" class="clear-btn" @click="store.searchQuery = ''">✕</button>
@@ -15,21 +15,21 @@
     <template v-if="store.searchQuery">
       <div class="filter-section">
         <template v-if="results.techs.length">
-          <div class="results-label">Технології ({{ results.techs.length }})</div>
+          <div class="results-label">{{ t('label_techs') }} ({{ results.techs.length }})</div>
           <div
-            v-for="t in results.techs"
-            :key="'t-' + t.name"
+            v-for="tech in results.techs"
+            :key="'t-' + tech.name"
             class="result-item"
-            :class="{ active: store.selectedTech?.name === t.name }"
-            @click="store.selectTech(t)"
+            :class="{ active: store.selectedTech?.name === tech.name }"
+            @click="store.selectTech(tech)"
           >
             <span class="type-badge tech">Т</span>
-            {{ t.name }}
+            {{ tech.name }}
           </div>
         </template>
 
         <template v-if="results.components.length">
-          <div class="results-label">Компоненти ({{ results.components.length }})</div>
+          <div class="results-label">{{ t('label_components') }} ({{ results.components.length }})</div>
           <div
             v-for="c in results.components"
             :key="'c-' + c.name"
@@ -43,7 +43,7 @@
         </template>
 
         <template v-if="results.facilities.length">
-          <div class="results-label">Споруди ({{ results.facilities.length }})</div>
+          <div class="results-label">{{ t('label_facilities') }} ({{ results.facilities.length }})</div>
           <div
             v-for="f in results.facilities"
             :key="'f-' + f.name"
@@ -57,7 +57,7 @@
         </template>
 
         <div v-if="!results.techs.length && !results.components.length && !results.facilities.length" class="no-results">
-          Нічого не знайдено
+          {{ t('no_results') }}
         </div>
       </div>
     </template>
@@ -71,7 +71,7 @@
           @click="store.clearFilter()"
         >
           <span class="dot" style="background:#94a3b8" />
-          Всі групи
+          {{ t('all_groups') }}
           <span class="cnt">{{ store.techs.length }}</span>
         </div>
         <template v-for="group in store.groups" :key="group">
@@ -100,9 +100,50 @@
       </div>
     </template>
 
+    <!-- Resource legend -->
+    <div class="legend-section">
+      <div class="section-title">{{ t('legend_title') }}</div>
+      <div class="legend-grid">
+        <div class="legend-row">
+          <span class="legend-dot minerals" /><span class="legend-abbr minerals">{{ t('res_min') }}</span>
+          <span class="legend-full">{{ t('res_min_full') }}</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-dot organics" /><span class="legend-abbr organics">{{ t('res_org') }}</span>
+          <span class="legend-full">{{ t('res_org_full') }}</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-dot radio" /><span class="legend-abbr radio">{{ t('res_rad') }}</span>
+          <span class="legend-full">{{ t('res_rad_full') }}</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-dot fuel" /><span class="legend-abbr fuel">{{ t('res_fuel') }}</span>
+          <span class="legend-full">{{ t('res_fuel_full') }}</span>
+        </div>
+        <div class="legend-row">
+          <span class="legend-dot ammo" /><span class="legend-abbr ammo">{{ t('res_ammo') }}</span>
+          <span class="legend-full">{{ t('res_ammo_full') }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="lang-section">
+      <button
+        class="lang-btn"
+        :class="{ active: currentLang === 'uk' }"
+        @click="store.setLanguage('uk')"
+      >УКР</button>
+      <button
+        class="lang-btn"
+        :class="{ active: currentLang === 'en' }"
+        @click="store.setLanguage('en')"
+      >ENG</button>
+    </div>
+
     <!-- Researched progress -->
     <div class="progress-section">
-      <div class="section-title">Прогрес дослідження</div>
+      <div class="section-title">{{ t('progress_title') }}</div>
       <div class="progress-bar-wrap">
         <div class="progress-bar" :style="{ width: progressPct + '%' }" />
       </div>
@@ -114,8 +155,10 @@
 <script setup>
 import { computed } from 'vue'
 import { useTechStore } from '../stores/techStore'
+import { t, lang } from '../i18n.js'
 
 const store = useTechStore()
+const currentLang = lang
 
 const GROUP_COLORS = {
   'Культура':            '#c084fc',
@@ -254,6 +297,32 @@ const progressPct = computed(() =>
   border-radius: 8px;
 }
 
+.lang-section {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+}
+.lang-btn {
+  flex: 1;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-dim);
+  transition: all 0.15s;
+}
+.lang-btn:hover { background: var(--bg-hover); color: var(--text); }
+.lang-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
+}
+
 .progress-section {
   padding: 12px 14px;
   border-top: 1px solid var(--border);
@@ -283,4 +352,43 @@ const progressPct = computed(() =>
   color: var(--text-dim);
   text-align: right;
 }
+
+.legend-section {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+}
+.legend-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.legend-abbr {
+  font-size: 11px;
+  font-weight: 700;
+  width: 28px;
+  flex-shrink: 0;
+}
+.legend-full {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.legend-dot.minerals, .legend-abbr.minerals { background: #94a3b8; color: #94a3b8; }
+.legend-dot.organics,  .legend-abbr.organics  { background: #34d399; color: #34d399; }
+.legend-dot.radio,     .legend-abbr.radio      { background: #fb923c; color: #fb923c; }
+.legend-dot.fuel,      .legend-abbr.fuel       { background: #60a5fa; color: #60a5fa; }
+.legend-dot.ammo,      .legend-abbr.ammo       { background: #f87171; color: #f87171; }
 </style>

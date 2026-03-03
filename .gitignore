@@ -4,3 +4,4 @@ dist-electron/
 out/
 release/
 .claude
+__game/

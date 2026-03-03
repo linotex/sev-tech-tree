@@ -1,0 +1,1671 @@
+[
+  {
+    "name": "Изучение культуры",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 1,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Гражданское общество",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Экономика",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Образование",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Экология",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Этика",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Отдых",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "История",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Математика",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Философия",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Политология",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Социология",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Спорт",
+    "group": "Культура",
+    "category": "Культура",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение культуры",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Астрофизика",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Биология",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 2,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Химия",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Стр-во",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Промышленность",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Военная наука",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Физика",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 5,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Планетарная инженерия",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 2,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Психология",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Кристаллургия",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 2,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Органическая инженерия",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 2,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Изучение психики",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Изучение религии",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 2,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Изучение времени",
+    "group": "Теоретические науки",
+    "category": "Теоретические науки",
+    "maxLevel": 3,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Колониз. каменистой планеты",
+    "group": "Прикладные науки",
+    "category": "Колонизация",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Колониз. ледяной планеты",
+    "group": "Прикладные науки",
+    "category": "Колонизация",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Колониз. планеты газ. гиганта",
+    "group": "Прикладные науки",
+    "category": "Колонизация",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Ремонт",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 50,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Стр-во легких корпусов",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Стр-во ср. и легких корпусов",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во легких корпусов",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Стр-во средних корпусов",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во ср. и легких корпусов",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Стр-во ср. и тяжелых корпусов",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во средних корпусов",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Стр-во тяжелых корпусов",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во ср. и тяжелых корпусов",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Стр-во огромных корпусов",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во тяжелых корпусов",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Строительство базы",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Стр-во большой базы",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Строительство базы",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Стр-во корабля-базы",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во огромных корпусов",
+        "level": 5
+      },
+      {
+        "tech": "Стр-во большой базы",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Космические доки",
+    "group": "Прикладные науки",
+    "category": "Стр-во",
+    "maxLevel": 50,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Дроны",
+    "group": "Прикладные науки",
+    "category": "Соединения",
+    "maxLevel": 9,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Истребители",
+    "group": "Прикладные науки",
+    "category": "Соединения",
+    "maxLevel": 9,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Мины",
+    "group": "Прикладные науки",
+    "category": "Соединения",
+    "maxLevel": 9,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Спутники",
+    "group": "Прикладные науки",
+    "category": "Соединения",
+    "maxLevel": 9,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Десант",
+    "group": "Прикладные науки",
+    "category": "Соединения",
+    "maxLevel": 9,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Оружейные платформы",
+    "group": "Прикладные науки",
+    "category": "Соединения",
+    "maxLevel": 9,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Снабжение звездолетов",
+    "group": "Прикладные науки",
+    "category": "Планетная промышленность",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Складирование",
+    "group": "Прикладные науки",
+    "category": "Складирование",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Роботехника",
+    "group": "Прикладные науки",
+    "category": "Планетная промышленность",
+    "maxLevel": 40,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Стр-во",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Централиз. комп. системы",
+    "group": "Прикладные науки",
+    "category": "Планетная промышленность",
+    "maxLevel": 40,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Промышленность",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Защитные технологии",
+    "group": "Прикладные науки",
+    "category": "Планетная промышленность",
+    "maxLevel": 2,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Медицинское обслуживание",
+    "group": "Прикладные науки",
+    "category": "Медицина",
+    "maxLevel": 49,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Использование планет",
+    "group": "Прикладные науки",
+    "category": "Планетная промышленность",
+    "maxLevel": 21,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Планетарная инженерия",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Управление ресурсами",
+    "group": "Прикладные науки",
+    "category": "Ресурсы планеты",
+    "maxLevel": 46,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Химия",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Добыча минералов",
+    "group": "Прикладные науки",
+    "category": "Ресурсы планеты",
+    "maxLevel": 71,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Добыча органики",
+    "group": "Прикладные науки",
+    "category": "Ресурсы планеты",
+    "maxLevel": 71,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Сбор радиоакт. сырья",
+    "group": "Прикладные науки",
+    "category": "Ресурсы планеты",
+    "maxLevel": 71,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Груз",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 25,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Пополнение запасов",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 39,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Ионные двигатели",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Антиматер. двигатели",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Ионные двигатели",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Фотонные двигатели",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Антиматер. двигатели",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Квантовые двигатели",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 10,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Фотонные двигатели",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Броня",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Силовое поле",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Маскировка",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "name": "Сенсоры",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 30,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Сканеры",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Компьютеры",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Промышленность",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Системы защиты",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 30,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Военная наука",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Орудийные модули",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 1,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Модули кораб. вооружения",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Орудийные модули",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Модули вооружения базы",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Орудийные модули",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Модули вооруж. единицы",
+    "group": "Прикладные науки",
+    "category": "Системы транспортных средств",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Орудийные модули",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Органическая технология",
+    "group": "Прикладные науки",
+    "category": "Расовые технологии",
+    "maxLevel": 79,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Органическая инженерия",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Психическая технология",
+    "group": "Прикладные науки",
+    "category": "Расовые технологии",
+    "maxLevel": 51,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение психики",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Религиозная технология",
+    "group": "Прикладные науки",
+    "category": "Расовые технологии",
+    "maxLevel": 46,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение религии",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Темпоральная технология",
+    "group": "Прикладные науки",
+    "category": "Расовые технологии",
+    "maxLevel": 51,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение времени",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Кристал. технология",
+    "group": "Прикладные науки",
+    "category": "Расовые технологии",
+    "maxLevel": 51,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Кристаллургия",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Звездные технологии",
+    "group": "Прикладные науки",
+    "category": "Звезды",
+    "maxLevel": 30,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Астрофизика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Звездные манипуляции",
+    "group": "Прикладные науки",
+    "category": "Звезды",
+    "maxLevel": 121,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Астрофизика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Службы разведки",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Диверсия - Корабли и флоты",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "name": "Диверсия - Планеты и колонии",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "name": "Диверсия - По всей империи",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Диверсия - Политическая",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Шпионаж - Корабли и флоты",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Шпионаж - Планеты и колонии",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Шпионаж - По всей империи",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Шпионаж - Политический",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "name": "Совместная разведка",
+    "group": "Прикладные науки",
+    "category": "Разведка",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Службы разведки",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Прикладные исследования",
+    "group": "Прикладные науки",
+    "category": "Основное",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Передовые военные технологии",
+    "group": "Прикладные науки",
+    "category": "Основное",
+    "maxLevel": 101,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Военная наука",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Прикладная политология",
+    "group": "Прикладные науки",
+    "category": "Основное",
+    "maxLevel": 39,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Психология",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Интерфейс нейр. компьютеров",
+    "group": "Прикладные науки",
+    "category": "Уникальный",
+    "maxLevel": 20,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Защита планеты силовыми полями",
+    "group": "Прикладные науки",
+    "category": "Уникальный",
+    "maxLevel": 51,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Энерг. потоковое вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Энерг. импульсное вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Ракетное вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Плазм. ракетное вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Химия",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Огнестрельное оружие",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 1,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Торпедное вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Военная наука",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Высокоэнерг. вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Антиматер. двигатели",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Фазово-энерг. вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Точ. защитное вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Военная наука",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Орудие борьбы с сил. полями",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Силовое поле",
+        "level": 4
+      }
+    ]
+  },
+  {
+    "name": "Притяг. / отталк. орудия",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Астрофизика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Орудие перегр. вооружения",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Астрофизика",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Орудие перегр. двигателей",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Ионные двигатели",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Гравитац. вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Астрофизика",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Орудие искривл. простр-ва",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Физика",
+        "level": 5
+      }
+    ]
+  },
+  {
+    "name": "Компьютерный бой",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Компьютеры",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Нуль-простр. вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение транспортных средств",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Астрофизика",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Захват корабля",
+    "group": "Вооружение",
+    "category": "Захват корабля",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Военная наука",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Биологическое вооружение",
+    "group": "Вооружение",
+    "category": "Планетное вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Биология",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Бомбардир. вооружение",
+    "group": "Вооружение",
+    "category": "Планетное вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Вооружение десанта",
+    "group": "Вооружение",
+    "category": "Вооружение единиц",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Десант",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Компактное вооружение",
+    "group": "Вооружение",
+    "category": "Вооружение единиц",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Боеголовки",
+    "group": "Вооружение",
+    "category": "Боеголовки",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Темпоральное вооружение",
+    "group": "Вооружение",
+    "category": "Расовое вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение времени",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Психическое вооружение",
+    "group": "Вооружение",
+    "category": "Расовое вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Изучение психики",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "name": "Органическое вооружение",
+    "group": "Вооружение",
+    "category": "Расовое вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Органическая инженерия",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Кристал. вооружение",
+    "group": "Вооружение",
+    "category": "Расовое вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": [
+      {
+        "tech": "Кристаллургия",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "name": "Тяжелое вооружение борьбы с силовыми полями",
+    "group": "Вооружение",
+    "category": "Уникальное вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Тяж. орудие перегр. двигателей",
+    "group": "Вооружение",
+    "category": "Уникальное вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Высасывание энергии",
+    "group": "Вооружение",
+    "category": "Уникальное вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  },
+  {
+    "name": "Разрушение силового поля",
+    "group": "Вооружение",
+    "category": "Уникальное вооружение",
+    "maxLevel": 100,
+    "costPerLevel": 0,
+    "startLevel": 0,
+    "isUnique": false,
+    "requirements": []
+  }
+]

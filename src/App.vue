@@ -8,10 +8,10 @@
       <div class="topbar-center">
         <span v-if="version" class="version-badge">v{{ version }}</span>
         <span class="stat">
-          <span class="stat-val">{{ store.techs.length }}</span> технологій
+          <span class="stat-val">{{ store.techs.length }}</span> {{ t('stat_techs') }}
         </span>
         <span class="stat">
-          <span class="stat-val">{{ researchedCount }}</span> досліджено
+          <span class="stat-val">{{ researchedCount }}</span> {{ t('stat_researched') }}
         </span>
         <span v-if="store.selectedTech" class="stat-selected">
           ▶ {{ store.selectedTech.name }}
@@ -23,12 +23,12 @@
           class="btn-research"
           :class="{ researched: currentResearchedLevel > 0 }"
           @click="store.toggleResearched(store.selectedTech.name)"
-          :title="`Досліджено: ${currentResearchedLevel} / ${store.selectedTech.maxLevel}`"
+          :title="`${t('research_level')}: ${currentResearchedLevel} / ${store.selectedTech.maxLevel}`"
         >
-          {{ currentResearchedLevel > 0 ? '✓ Досліджено' : '○ Дослідити' }}
+          {{ currentResearchedLevel > 0 ? t('btn_researched') : t('btn_research') }}
         </button>
-        <button class="btn-reset" @click="resetProgress" title="Скинути прогрес">
-          ↺ Скинути
+        <button class="btn-reset" @click="resetProgress" :title="t('btn_reset_title')">
+          {{ t('btn_reset') }}
         </button>
       </div>
     </header>
@@ -43,6 +43,7 @@
 
 <script setup>
 import { computed, ref, onMounted } from 'vue'
+import { t } from './i18n.js'
 
 const version = ref('')
 onMounted(async () => {
@@ -64,7 +65,7 @@ const currentResearchedLevel = computed(() =>
 )
 
 function resetProgress() {
-  if (confirm('Скинути весь прогрес дослідження?')) {
+  if (confirm(t('confirm_reset'))) {
     store.$patch({ researchedLevels: {} })
   }
 }

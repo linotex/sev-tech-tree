@@ -1,13 +1,23 @@
 import { defineStore } from 'pinia'
-import techTreeData from '@parsed/tech_tree.json'
-import componentsData from '@parsed/components.json'
-import facilitiesData from '@parsed/facilities.json'
+import { lang, setLang } from '../i18n.js'
+
+import techTreeUk from '@parsed/tech_tree_uk.json'
+import techTreeEn from '@parsed/tech_tree_en.json'
+import componentsUk from '@parsed/components_uk.json'
+import componentsEn from '@parsed/components_en.json'
+import facilitiesUk from '@parsed/facilities_uk.json'
+import facilitiesEn from '@parsed/facilities_en.json'
+
+const dataByLang = {
+  uk: { techs: techTreeUk, components: componentsUk, facilities: facilitiesUk },
+  en: { techs: techTreeEn, components: componentsEn, facilities: facilitiesEn },
+}
 
 export const useTechStore = defineStore('tech', {
   state: () => ({
-    techs: techTreeData,
-    components: componentsData,
-    facilities: facilitiesData,
+    techs: techTreeUk,
+    components: componentsUk,
+    facilities: facilitiesUk,
     researchedLevels: {}, // { techName: currentLevel }
     selectedTech: null,
     selectedItem: null, // { type: 'component'|'facility', data: {...} }
@@ -121,6 +131,20 @@ export const useTechStore = defineStore('tech', {
   },
 
   actions: {
+    setLanguage(l) {
+      const data = dataByLang[l]
+      if (!data) return
+      setLang(l)
+      this.$patch({
+        techs: data.techs,
+        components: data.components,
+        facilities: data.facilities,
+        selectedTech: null,
+        selectedItem: null,
+        highlightPath: null,
+      })
+    },
+
     selectTech(tech) {
       this.selectedTech = tech
       this.selectedItem = null
