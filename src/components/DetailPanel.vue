@@ -81,6 +81,9 @@
         </div>
         <div class="cost-label">
           {{ t('cost_per_level') }}: <strong>{{ tech.costPerLevel.toLocaleString() }}</strong> RP
+          <span v-if="currentLevel > 0" class="cost-total">
+            · {{ t('total_cost') }}: <strong>{{ (currentLevel * tech.costPerLevel).toLocaleString() }}</strong> RP
+          </span>
         </div>
       </div>
 
@@ -161,8 +164,38 @@
           </div>
         </div>
 
+        <!-- Empire bonuses -->
+        <div v-if="bonuses.length" class="section">
+          <div class="section-title">{{ t('empire_bonuses') }} ({{ bonuses.length }})</div>
+          <div
+            v-for="b in bonuses"
+            :key="b.name"
+            class="item-card bonus-card"
+            @click="toggleItem(b.name)"
+          >
+            <div class="item-name">
+              {{ b.name }}
+              <span class="req-level-badge" :class="{ unlocked: currentLevel >= b.reqLevel }">
+                lvl {{ b.reqLevel }}
+              </span>
+            </div>
+            <template v-if="expandedItems.has(b.name)">
+              <div v-if="b.description" class="item-desc">{{ b.description }}</div>
+              <div class="abilities bonus-abilities">
+                <div
+                  v-for="(ab, i) in b.abilities.filter(a => a.description)"
+                  :key="i"
+                  class="ability-line"
+                >
+                  {{ renderAbilityDesc(ab, techEffectiveLevel(b)) }}
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
         <div
-          v-if="!tech.requirements.length && !unlocksTechs.length && !components.length && !facilities.length"
+          v-if="!tech.requirements.length && !unlocksTechs.length && !components.length && !facilities.length && !bonuses.length"
           class="empty-note"
         >
           {{ t('no_deps') }}
@@ -181,7 +214,7 @@ import { computed, reactive } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useTechStore } from '../stores/techStore'
 import { t } from '../i18n.js'
-import { evalFormula, renderAbilityDesc, effectiveLevel } from '../formulaUtil.js'
+import { renderAbilityDesc, effectiveLevel } from '../formulaUtil.js'
 import ItemStats from './ItemStats.vue'
 
 const store = useTechStore()
@@ -226,6 +259,7 @@ const unlocksTechs = computed(() => {
 
 const components = computed(() => tech.value ? store.unlockedComponents(tech.value.name) : [])
 const facilities = computed(() => tech.value ? store.unlockedFacilities(tech.value.name) : [])
+const bonuses    = computed(() => tech.value ? store.unlockedBonuses(tech.value.name) : [])
 
 function incLevel() {
   if (tech.value && currentLevel.value < tech.value.maxLevel)
@@ -306,6 +340,7 @@ function toggleItem(name) {
 }
 .level-pip.filled { background: var(--accent); border-color: var(--accent); }
 .cost-label { font-size: 12px; color: var(--text-dim); }
+.cost-total { color: var(--accent-dim); margin-left: 4px; }
 
 .section { display: flex; flex-direction: column; gap: 4px; }
 .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 4px; }
@@ -341,6 +376,29 @@ function toggleItem(name) {
 }
 .req-level-badge.unlocked { background: #1a3a2a; color: var(--green); border-color: var(--green); }
 .item-desc { font-size: 12px; color: var(--text-dim); margin-top: 6px; line-height: 1.5; }
+
+.bonus-card { border-color: transparent; }
+.bonus-card:hover { border-color: var(--accent-dim); }
+
+.bonus-abilities {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.ability-line {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.4;
+  padding-left: 10px;
+  position: relative;
+}
+.ability-line::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-dim);
+}
 
 .empty-note { font-size: 12px; color: var(--text-dim); font-style: italic; text-align: center; padding: 8px; }
 

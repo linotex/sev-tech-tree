@@ -1,6 +1,8 @@
 """
 SEV Tech Tree — game data parser
-Parses TechAreas.txt, Components.txt, Facilities.txt from Space Empires V.
+Parses TechAreas.txt, Components.txt, Facilities.txt,
+CulturalAchievements.txt, IntelligenceAchievements.txt,
+EmpireGainedAbilities.txt from Space Empires V.
 
 Usage:
     python3 scripts/parse_data.py [lang]
@@ -9,11 +11,9 @@ Usage:
               resources/tech_tree_{lang}.json
               resources/components_{lang}.json
               resources/facilities_{lang}.json
+              resources/empire_bonuses_{lang}.json
 
-The game files must be present in:
-    __game/data/TechAreas.txt
-    __game/data/Components.txt
-    __game/data/Facilities.txt
+The game files must be present in __game/data/
 """
 
 import json
@@ -62,7 +62,6 @@ def parse_blocks(content: str, name_key: str = 'Название') -> list[dict[
             current = {}
 
         if current is not None and key:
-            # Numbered keys like "Тип способности 1" — keep as-is
             current[key] = value
 
     if current:
@@ -92,10 +91,6 @@ def parse_tech_areas() -> list[dict]:
     content = read_game_file('TechAreas.txt')
     raw_blocks = parse_blocks(content, name_key='Название')
 
-    # Resolve group/category from header comments isn't reliable —
-    # use the existing logic: group = first tech's group field or infer from file order.
-    # TechAreas.txt has "Группа" field per tech.
-
     techs = []
     for b in raw_blocks:
         name = b.get('Название', '').strip()
@@ -109,7 +104,6 @@ def parse_tech_areas() -> list[dict]:
         start_level = int(b.get('Начальный уровень', 0))
         is_unique = b.get('Уникальная или расовая технология', 'ЛОЖНО').strip().upper() == 'ВЕРНО'
 
-        # Requirements
         req_count = int(b.get('Количество требований', 0))
         requirements = []
         for i in range(1, req_count + 1):
@@ -134,11 +128,11 @@ def parse_tech_areas() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# Components parser
+# Shared ability/requirement parsers
 # ---------------------------------------------------------------------------
 
-def parse_abilities(b: dict, count_key: str = 'Количество способностей') -> list[dict]:
-    count = int(b.get(count_key, 0))
+def parse_abilities(b: dict) -> list[dict]:
+    count = int(b.get('Количество способностей', 0))
     abilities = []
     for i in range(1, count + 1):
         atype = b.get(f'Тип способности {i}', '').strip()
@@ -161,6 +155,10 @@ def parse_requirements(b: dict) -> list[dict]:
             reqs.append({'tech': tech_name, 'level': level})
     return reqs
 
+
+# ---------------------------------------------------------------------------
+# Components parser
+# ---------------------------------------------------------------------------
 
 def parse_components() -> list[dict]:
     content = read_game_file('Components.txt')
@@ -221,7 +219,6 @@ def parse_facilities() -> list[dict]:
         name = b.get('Название', '').strip()
         if not name:
             continue
-        # Skip intel-class duplicate name fields that come up as solo entries
         if not b.get('Группа объекта') and not b.get('Описание'):
             continue
 
@@ -246,6 +243,44 @@ def parse_facilities() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Empire bonuses parser
+# (CulturalAchievements, IntelligenceAchievements, EmpireGainedAbilities)
+# ---------------------------------------------------------------------------
+
+BONUS_SOURCES = [
+    ('CulturalAchievements.txt',      'cultural'),
+    ('IntelligenceAchievements.txt',  'intelligence'),
+    ('EmpireGainedAbilities.txt',     'empire'),
+]
+
+
+def parse_empire_bonuses() -> list[dict]:
+    bonuses = []
+    for filename, source in BONUS_SOURCES:
+        content = read_game_file(filename)
+        raw_blocks = parse_blocks(content, name_key='Название')
+
+        for b in raw_blocks:
+            name = b.get('Название', '').strip()
+            if not name:
+                continue
+            reqs = parse_requirements(b)
+            if not reqs:
+                continue  # skip entries not linked to any tech
+
+            bonuses.append({
+                'name': name,
+                'description': b.get('Описание', '').strip(),
+                'source': source,
+                'maxLevel': int(b.get('Максимальный уровень', 1)),
+                'abilities': parse_abilities(b),
+                'requirements': reqs,
+            })
+
+    return bonuses
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -260,15 +295,15 @@ if __name__ == '__main__':
     print(f'Parsing game data → lang={LANG}')
 
     print('TechAreas...')
-    techs = parse_tech_areas()
-    write_json(techs, f'tech_tree_{LANG}.json')
+    write_json(parse_tech_areas(), f'tech_tree_{LANG}.json')
 
     print('Components...')
-    comps = parse_components()
-    write_json(comps, f'components_{LANG}.json')
+    write_json(parse_components(), f'components_{LANG}.json')
 
     print('Facilities...')
-    facs = parse_facilities()
-    write_json(facs, f'facilities_{LANG}.json')
+    write_json(parse_facilities(), f'facilities_{LANG}.json')
+
+    print('Empire bonuses...')
+    write_json(parse_empire_bonuses(), f'empire_bonuses_{LANG}.json')
 
     print('Done.')

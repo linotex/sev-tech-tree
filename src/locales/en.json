@@ -41,5 +41,7 @@
   "res_rad_full":  "Radioactives",
   "res_fuel_full": "Fuel",
   "res_ammo_full": "Ammo",
-  "legend_title": "Resources"
+  "legend_title": "Resources",
+  "total_cost": "Total",
+  "empire_bonuses": "Empire Bonuses"
 }

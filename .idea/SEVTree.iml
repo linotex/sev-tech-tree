@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="GENERAL_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="IlluminatedCloud" name="Illuminated Cloud">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/@babel/core/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/@jridgewell/gen-mapping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/@jridgewell/remapping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/@jridgewell/sourcemap-codec/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/@jridgewell/trace-mapping/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/@malept/cross-spawn-promise/dist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/cacheable-request/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/clone-response/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/config-file-ts/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/cytoscape-dagre/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/cytoscape/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/debug/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/dir-compare/build/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/entities/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/estree-walker/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/exponential-backoff/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/global-agent/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/ip-address/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/keyv/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/make-fetch-happen/node_modules/agent-base/dist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/make-fetch-happen/node_modules/agent-base/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/node-addon-api/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/node-gyp/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/responselike/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/simple-update-notifier/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/socks-proxy-agent/node_modules/agent-base/dist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/socks-proxy-agent/node_modules/agent-base/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/sprintf-js/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/node_modules/stat-mode/dist/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/temp" />
+      <excludeFolder url="file://$MODULE_DIR$/tmp" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="SEVTree/lwc_types" level="project" />
+  </component>
+</module>

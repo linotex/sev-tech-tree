@@ -7,10 +7,12 @@ import componentsUk from '@parsed/components_uk.json'
 import componentsEn from '@parsed/components_en.json'
 import facilitiesUk from '@parsed/facilities_uk.json'
 import facilitiesEn from '@parsed/facilities_en.json'
+import empireBonusesUk from '@parsed/empire_bonuses_uk.json'
+import empireBonusesEn from '@parsed/empire_bonuses_en.json'
 
 const dataByLang = {
-  uk: { techs: techTreeUk, components: componentsUk, facilities: facilitiesUk },
-  en: { techs: techTreeEn, components: componentsEn, facilities: facilitiesEn },
+  uk: { techs: techTreeUk, components: componentsUk, facilities: facilitiesUk, empireBonuses: empireBonusesUk },
+  en: { techs: techTreeEn, components: componentsEn, facilities: facilitiesEn, empireBonuses: empireBonusesEn },
 }
 
 export const useTechStore = defineStore('tech', {
@@ -18,6 +20,7 @@ export const useTechStore = defineStore('tech', {
     techs: techTreeUk,
     components: componentsUk,
     facilities: facilitiesUk,
+    empireBonuses: empireBonusesUk,
     researchedLevels: {}, // { techName: currentLevel }
     selectedTech: null,
     selectedItem: null, // { type: 'component'|'facility', data: {...} }
@@ -82,6 +85,14 @@ export const useTechStore = defineStore('tech', {
         .sort((a, b) => a.reqLevel - b.reqLevel)
     },
 
+    // Empire bonuses unlocked by a specific tech
+    unlockedBonuses: (state) => (techName) => {
+      return state.empireBonuses
+        .filter(b => b.requirements.some(r => r.tech === techName))
+        .map(b => ({ ...b, reqLevel: b.requirements.find(r => r.tech === techName).level }))
+        .sort((a, b) => a.reqLevel - b.reqLevel)
+    },
+
     // Facilities unlocked by a specific tech (with required level)
     unlockedFacilities: (state) => (techName) => {
       return state.facilities
@@ -139,6 +150,7 @@ export const useTechStore = defineStore('tech', {
         techs: data.techs,
         components: data.components,
         facilities: data.facilities,
+        empireBonuses: data.empireBonuses,
         selectedTech: null,
         selectedItem: null,
         highlightPath: null,
