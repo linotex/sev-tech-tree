@@ -4,7 +4,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 1,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -14,7 +14,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -29,7 +29,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -44,7 +44,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -59,7 +59,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -74,7 +74,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -89,7 +89,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -104,7 +104,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -119,7 +119,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -134,7 +134,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -149,7 +149,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -164,7 +164,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -179,7 +179,7 @@
     "group": "Культура",
     "category": "Культура",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -194,7 +194,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -204,7 +204,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 2,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -214,7 +214,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -224,7 +224,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -234,7 +234,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -244,7 +244,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -254,7 +254,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 5,
-    "costPerLevel": 0,
+    "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -264,7 +264,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 2,
-    "costPerLevel": 0,
+    "costPerLevel": 100000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -274,7 +274,7 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -284,9 +284,9 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 2,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -294,9 +294,9 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 2,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -304,9 +304,9 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 40000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -314,9 +314,9 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 2,
-    "costPerLevel": 0,
+    "costPerLevel": 75000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -324,9 +324,9 @@
     "group": "Теоретические науки",
     "category": "Теоретические науки",
     "maxLevel": 3,
-    "costPerLevel": 0,
+    "costPerLevel": 50000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -334,7 +334,7 @@
     "group": "Прикладные науки",
     "category": "Колонизация",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 200000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -344,7 +344,7 @@
     "group": "Прикладные науки",
     "category": "Колонизация",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 200000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -354,7 +354,7 @@
     "group": "Прикладные науки",
     "category": "Колонизация",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 200000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -364,7 +364,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 50,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -374,7 +374,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -384,7 +384,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 8000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -399,7 +399,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 11000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -414,7 +414,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 14000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -429,7 +429,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 17000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -444,7 +444,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 20000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -459,7 +459,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 8000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -469,7 +469,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 16000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -484,7 +484,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 23000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -503,7 +503,7 @@
     "group": "Прикладные науки",
     "category": "Стр-во",
     "maxLevel": 50,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -513,7 +513,7 @@
     "group": "Прикладные науки",
     "category": "Соединения",
     "maxLevel": 9,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -523,7 +523,7 @@
     "group": "Прикладные науки",
     "category": "Соединения",
     "maxLevel": 9,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -538,7 +538,7 @@
     "group": "Прикладные науки",
     "category": "Соединения",
     "maxLevel": 9,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -553,7 +553,7 @@
     "group": "Прикладные науки",
     "category": "Соединения",
     "maxLevel": 9,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -563,7 +563,7 @@
     "group": "Прикладные науки",
     "category": "Соединения",
     "maxLevel": 9,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -573,7 +573,7 @@
     "group": "Прикладные науки",
     "category": "Соединения",
     "maxLevel": 9,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -583,7 +583,7 @@
     "group": "Прикладные науки",
     "category": "Планетная промышленность",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -593,7 +593,7 @@
     "group": "Прикладные науки",
     "category": "Складирование",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -603,7 +603,7 @@
     "group": "Прикладные науки",
     "category": "Планетная промышленность",
     "maxLevel": 40,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -618,7 +618,7 @@
     "group": "Прикладные науки",
     "category": "Планетная промышленность",
     "maxLevel": 40,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -633,7 +633,7 @@
     "group": "Прикладные науки",
     "category": "Планетная промышленность",
     "maxLevel": 2,
-    "costPerLevel": 0,
+    "costPerLevel": 100000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -648,7 +648,7 @@
     "group": "Прикладные науки",
     "category": "Медицина",
     "maxLevel": 49,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -658,7 +658,7 @@
     "group": "Прикладные науки",
     "category": "Планетная промышленность",
     "maxLevel": 21,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -673,7 +673,7 @@
     "group": "Прикладные науки",
     "category": "Ресурсы планеты",
     "maxLevel": 46,
-    "costPerLevel": 0,
+    "costPerLevel": 20000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -688,7 +688,7 @@
     "group": "Прикладные науки",
     "category": "Ресурсы планеты",
     "maxLevel": 71,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -698,7 +698,7 @@
     "group": "Прикладные науки",
     "category": "Ресурсы планеты",
     "maxLevel": 71,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -708,7 +708,7 @@
     "group": "Прикладные науки",
     "category": "Ресурсы планеты",
     "maxLevel": 71,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -718,7 +718,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 25,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -728,7 +728,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 39,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -738,7 +738,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -748,7 +748,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -763,7 +763,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 15000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -778,7 +778,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 10,
-    "costPerLevel": 0,
+    "costPerLevel": 20000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -793,7 +793,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -803,7 +803,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -818,7 +818,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -833,7 +833,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 30,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -843,7 +843,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -858,7 +858,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -873,7 +873,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 30,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -888,7 +888,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 1,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -898,7 +898,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -913,7 +913,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -928,7 +928,7 @@
     "group": "Прикладные науки",
     "category": "Системы транспортных средств",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -943,9 +943,9 @@
     "group": "Прикладные науки",
     "category": "Расовые технологии",
     "maxLevel": 79,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Органическая инженерия",
@@ -958,9 +958,9 @@
     "group": "Прикладные науки",
     "category": "Расовые технологии",
     "maxLevel": 51,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Изучение психики",
@@ -973,9 +973,9 @@
     "group": "Прикладные науки",
     "category": "Расовые технологии",
     "maxLevel": 46,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Изучение религии",
@@ -988,9 +988,9 @@
     "group": "Прикладные науки",
     "category": "Расовые технологии",
     "maxLevel": 51,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Изучение времени",
@@ -1003,9 +1003,9 @@
     "group": "Прикладные науки",
     "category": "Расовые технологии",
     "maxLevel": 51,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Кристаллургия",
@@ -1018,7 +1018,7 @@
     "group": "Прикладные науки",
     "category": "Звезды",
     "maxLevel": 30,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1033,7 +1033,7 @@
     "group": "Прикладные науки",
     "category": "Звезды",
     "maxLevel": 121,
-    "costPerLevel": 0,
+    "costPerLevel": 100000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1048,7 +1048,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -1058,7 +1058,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1073,7 +1073,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1088,7 +1088,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1103,7 +1103,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1118,7 +1118,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1133,7 +1133,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1148,7 +1148,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1163,7 +1163,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1178,7 +1178,7 @@
     "group": "Прикладные науки",
     "category": "Разведка",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1193,7 +1193,7 @@
     "group": "Прикладные науки",
     "category": "Основное",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -1203,7 +1203,7 @@
     "group": "Прикладные науки",
     "category": "Основное",
     "maxLevel": 101,
-    "costPerLevel": 0,
+    "costPerLevel": 8000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1218,7 +1218,7 @@
     "group": "Прикладные науки",
     "category": "Основное",
     "maxLevel": 39,
-    "costPerLevel": 0,
+    "costPerLevel": 8000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1233,9 +1233,9 @@
     "group": "Прикладные науки",
     "category": "Уникальный",
     "maxLevel": 20,
-    "costPerLevel": 0,
+    "costPerLevel": 100000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -1243,9 +1243,9 @@
     "group": "Прикладные науки",
     "category": "Уникальный",
     "maxLevel": 51,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -1253,7 +1253,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1268,7 +1268,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1283,7 +1283,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 3000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -1293,7 +1293,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1308,7 +1308,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
     "requirements": []
@@ -1318,7 +1318,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1333,7 +1333,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1348,7 +1348,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1363,7 +1363,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1378,7 +1378,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1393,7 +1393,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1408,7 +1408,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1423,7 +1423,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1438,7 +1438,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1453,7 +1453,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1468,7 +1468,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1483,7 +1483,7 @@
     "group": "Вооружение",
     "category": "Вооружение транспортных средств",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 7000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1498,7 +1498,7 @@
     "group": "Вооружение",
     "category": "Захват корабля",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1513,7 +1513,7 @@
     "group": "Вооружение",
     "category": "Планетное вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 7000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1528,7 +1528,7 @@
     "group": "Вооружение",
     "category": "Планетное вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -1538,7 +1538,7 @@
     "group": "Вооружение",
     "category": "Вооружение единиц",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": [
@@ -1553,7 +1553,7 @@
     "group": "Вооружение",
     "category": "Вооружение единиц",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -1563,7 +1563,7 @@
     "group": "Вооружение",
     "category": "Боеголовки",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
     "requirements": []
@@ -1573,9 +1573,9 @@
     "group": "Вооружение",
     "category": "Расовое вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Изучение времени",
@@ -1588,9 +1588,9 @@
     "group": "Вооружение",
     "category": "Расовое вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Изучение психики",
@@ -1603,9 +1603,9 @@
     "group": "Вооружение",
     "category": "Расовое вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Органическая инженерия",
@@ -1618,9 +1618,9 @@
     "group": "Вооружение",
     "category": "Расовое вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": [
       {
         "tech": "Кристаллургия",
@@ -1633,9 +1633,9 @@
     "group": "Вооружение",
     "category": "Уникальное вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -1643,9 +1643,9 @@
     "group": "Вооружение",
     "category": "Уникальное вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 5000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -1653,9 +1653,9 @@
     "group": "Вооружение",
     "category": "Уникальное вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   },
   {
@@ -1663,9 +1663,9 @@
     "group": "Вооружение",
     "category": "Уникальное вооружение",
     "maxLevel": 100,
-    "costPerLevel": 0,
+    "costPerLevel": 4000,
     "startLevel": 0,
-    "isUnique": false,
+    "isUnique": true,
     "requirements": []
   }
 ]

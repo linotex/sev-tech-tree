@@ -105,9 +105,9 @@ def parse_tech_areas() -> list[dict]:
         group = b.get('Группа', '').strip()
         category = b.get('Категория', group).strip() or group
         max_level = int(b.get('Максимальный уровень', 1))
-        cost = int(b.get('Стоимость за уровень', 0))
+        cost = int(b.get('Стоимость уровня', 0))
         start_level = int(b.get('Начальный уровень', 0))
-        is_unique = b.get('Уникальная', 'ЛОЖЬ').strip().upper() == 'ВЕРНО'
+        is_unique = b.get('Уникальная или расовая технология', 'ЛОЖНО').strip().upper() == 'ВЕРНО'
 
         # Requirements
         req_count = int(b.get('Количество требований', 0))

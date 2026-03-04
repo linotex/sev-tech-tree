@@ -60,31 +60,31 @@
         <button class="close-btn" @click="store.selectTech(null)">✕</button>
       </div>
 
-      <div class="panel-body">
-        <!-- Level control -->
-        <div class="level-section">
-          <div class="level-label">
-            {{ t('research_level') }}
-            <span class="level-current">{{ currentLevel }} / {{ tech.maxLevel }}</span>
-          </div>
-          <div class="level-controls">
-            <button class="lvl-btn" @click="decLevel" :disabled="currentLevel === 0">−</button>
-            <div class="level-track">
-              <div
-                v-for="i in tech.maxLevel"
-                :key="i"
-                class="level-pip"
-                :class="{ filled: i <= currentLevel }"
-                @click="store.setResearchedLevel(tech.name, i === currentLevel ? i - 1 : i)"
-              />
-            </div>
-            <button class="lvl-btn" @click="incLevel" :disabled="currentLevel === tech.maxLevel">+</button>
-          </div>
-          <div class="cost-label">
-            {{ t('cost_per_level') }}: <strong>{{ tech.costPerLevel.toLocaleString() }}</strong> RP
-          </div>
+      <!-- Level control — outside scroll area, always visible -->
+      <div class="level-section">
+        <div class="level-label">
+          {{ t('research_level') }}
+          <span class="level-current">{{ currentLevel }} / {{ tech.maxLevel }}</span>
         </div>
+        <div class="level-controls">
+          <button class="lvl-btn" @click="decLevel" :disabled="currentLevel === 0">−</button>
+          <div class="level-track">
+            <div
+              v-for="i in tech.maxLevel"
+              :key="i"
+              class="level-pip"
+              :class="{ filled: i <= currentLevel }"
+              @click="store.setResearchedLevel(tech.name, i === currentLevel ? i - 1 : i)"
+            />
+          </div>
+          <button class="lvl-btn" @click="incLevel" :disabled="currentLevel === tech.maxLevel">+</button>
+        </div>
+        <div class="cost-label">
+          {{ t('cost_per_level') }}: <strong>{{ tech.costPerLevel.toLocaleString() }}</strong> RP
+        </div>
+      </div>
 
+      <div class="panel-body">
         <!-- Requirements -->
         <div v-if="tech.requirements.length" class="section">
           <div class="section-title">{{ t('requires') }}</div>
@@ -198,9 +198,12 @@ function groupColor(g) { return GROUP_COLORS[g] || '#94a3b8' }
 
 const currentLevel = computed(() => store.getResearchedLevel(tech.value?.name))
 
-// Level to use when showing stats for components/facilities under a tech
+// Level to use when showing stats for components/facilities under a tech.
+// Use max(currentLevel, reqLevel) so a component that requires lvl 3
+// never shows stats below lvl 3, even if tech is not yet researched that far.
 function techEffectiveLevel(item) {
-  return effectiveLevel(item, currentLevel.value)
+  const minLevel = item.reqLevel || 1
+  return effectiveLevel(item, Math.max(currentLevel.value || 1, minLevel))
 }
 
 // Level to use when showing a standalone selectedItem (from search)
@@ -280,7 +283,12 @@ function toggleItem(name) {
   display: flex; flex-direction: column; gap: 16px;
 }
 
-.level-section { background: var(--bg-card); border-radius: 8px; padding: 12px; }
+.level-section {
+  background: var(--bg-card);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
 .level-label { font-size: 12px; color: var(--text-dim); margin-bottom: 10px; display: flex; justify-content: space-between; }
 .level-current { color: var(--accent); font-weight: 600; }
 .level-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
