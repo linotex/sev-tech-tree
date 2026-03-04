@@ -4,8 +4,6 @@ A desktop application for visualizing and tracking the technology tree in **Spac
 
 Built with Electron + Vue 3 + Cytoscape.js. Runs on macOS and Windows.
 
-![Tech Tree Screenshot](docs/screenshot.png)
-
 ## Features
 
 - Interactive tech tree graph with dagre layout
