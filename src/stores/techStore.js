@@ -9,10 +9,12 @@ import facilitiesUk from '@parsed/facilities_uk.json'
 import facilitiesEn from '@parsed/facilities_en.json'
 import empireBonusesUk from '@parsed/empire_bonuses_uk.json'
 import empireBonusesEn from '@parsed/empire_bonuses_en.json'
+import vehicleSizesUk from '@parsed/vehicle_sizes_uk.json'
+import vehicleSizesEn from '@parsed/vehicle_sizes_en.json'
 
 const dataByLang = {
-  uk: { techs: techTreeUk, components: componentsUk, facilities: facilitiesUk, empireBonuses: empireBonusesUk },
-  en: { techs: techTreeEn, components: componentsEn, facilities: facilitiesEn, empireBonuses: empireBonusesEn },
+  uk: { techs: techTreeUk, components: componentsUk, facilities: facilitiesUk, empireBonuses: empireBonusesUk, vehicleSizes: vehicleSizesUk },
+  en: { techs: techTreeEn, components: componentsEn, facilities: facilitiesEn, empireBonuses: empireBonusesEn, vehicleSizes: vehicleSizesEn },
 }
 
 export const useTechStore = defineStore('tech', {
@@ -21,6 +23,7 @@ export const useTechStore = defineStore('tech', {
     components: componentsUk,
     facilities: facilitiesUk,
     empireBonuses: empireBonusesUk,
+    vehicleSizes: vehicleSizesUk,
     researchedLevels: {}, // { techName: currentLevel }
     selectedTech: null,
     selectedItem: null, // { type: 'component'|'facility', data: {...} }
@@ -37,6 +40,24 @@ export const useTechStore = defineStore('tech', {
 
     componentGroups: (state) => [...new Set(state.components.map(c => c.group))].sort(),
     facilityGroups: (state) => [...new Set(state.facilities.map(f => f.group))].sort(),
+    vehicleSizeTypes: (state) => [...new Set(state.vehicleSizes.map(v => v.shipType))],
+
+    filteredVehicleSizes: (state) => {
+      let result = state.vehicleSizes
+      if (state.itemFilterGroup) result = result.filter(v => v.shipType === state.itemFilterGroup)
+      if (state.searchQuery) {
+        const q = state.searchQuery.toLowerCase()
+        result = result.filter(v => v.name.toLowerCase().includes(q))
+      }
+      return result
+    },
+
+    // Vehicle sizes unlocked by a specific tech
+    unlockedVehicleSizes: (state) => (techName) => {
+      return state.vehicleSizes
+        .filter(v => v.techReq?.tech === techName)
+        .map(v => ({ ...v, reqLevel: v.techReq.level }))
+    },
 
     filteredComponents: (state) => {
       let result = state.components
@@ -83,7 +104,8 @@ export const useTechStore = defineStore('tech', {
       return {
         techs: state.techs.filter(t => t.name.toLowerCase().includes(q)),
         components: state.components.filter(c => c.name.toLowerCase().includes(q)),
-        facilities: state.facilities.filter(f => f.name.toLowerCase().includes(q))
+        facilities: state.facilities.filter(f => f.name.toLowerCase().includes(q)),
+        vehicles: state.vehicleSizes.filter(v => v.name.toLowerCase().includes(q))
       }
     },
 
@@ -176,6 +198,7 @@ export const useTechStore = defineStore('tech', {
         components: data.components,
         facilities: data.facilities,
         empireBonuses: data.empireBonuses,
+        vehicleSizes: data.vehicleSizes,
         selectedTech: null,
         selectedItem: null,
         highlightPath: null,

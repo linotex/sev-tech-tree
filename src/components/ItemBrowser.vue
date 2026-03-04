@@ -21,11 +21,14 @@
           :key="item.name"
           class="item-row"
           :class="{ selected: store.selectedItem?.data?.name === item.name }"
-          @click="store.selectItem(item, type)"
+          @click="selectItem(item)"
         >
           <span class="status-dot" :class="isUnlocked(item) ? 'unlocked' : 'locked'" />
           <span class="item-name">{{ item.name }}</span>
-          <span v-if="item.requirements.length" class="req-tags">
+          <span v-if="isVehicle && vehicleTonnage(item) != null" class="tonnage-badge">
+            {{ vehicleTonnage(item) }}{{ t('stat_tonnage_short') }}
+          </span>
+          <span v-else-if="!isVehicle && item.requirements.length" class="req-tags">
             <span v-for="r in item.requirements.slice(0, 2)" :key="r.tech" class="req-tag">
               {{ shortName(r.tech) }} {{ r.level }}
             </span>
@@ -41,12 +44,15 @@
         :key="item.name"
         class="item-row flat"
         :class="{ selected: store.selectedItem?.data?.name === item.name }"
-        @click="store.selectItem(item, type)"
+        @click="selectItem(item)"
       >
         <span class="status-dot" :class="isUnlocked(item) ? 'unlocked' : 'locked'" />
         <span class="item-name">{{ item.name }}</span>
-        <span v-if="!store.itemFilterGroup" class="group-tag">{{ item.group }}</span>
-        <span v-if="item.requirements.length" class="req-tags">
+        <span v-if="!store.itemFilterGroup" class="group-tag">{{ groupKey(item) }}</span>
+        <span v-if="isVehicle && vehicleTonnage(item) != null" class="tonnage-badge">
+          {{ vehicleTonnage(item) }}{{ t('stat_tonnage_short') }}
+        </span>
+        <span v-else-if="!isVehicle && item.requirements.length" class="req-tags">
           <span v-for="r in item.requirements.slice(0, 2)" :key="r.tech" class="req-tag">
             {{ shortName(r.tech) }} {{ r.level }}
           </span>
@@ -59,41 +65,68 @@
 <script setup>
 import { computed } from 'vue'
 import { useTechStore } from '../stores/techStore'
+import { evalFormula } from '../formulaUtil.js'
 import { t } from '../i18n.js'
 
 const props = defineProps({
-  type: { type: String, required: true } // 'component' | 'facility'
+  type: { type: String, required: true } // 'component' | 'facility' | 'vehicle'
 })
 
 const store = useTechStore()
 
+const isVehicle = computed(() => props.type === 'vehicle')
+
 const items = computed(() =>
-  props.type === 'component' ? store.filteredComponents : store.filteredFacilities
+  props.type === 'component' ? store.filteredComponents
+  : props.type === 'facility' ? store.filteredFacilities
+  : store.filteredVehicleSizes
 )
 
 const groupColor = computed(() =>
-  props.type === 'component' ? '#34d399' : '#fb923c'
+  props.type === 'component' ? '#34d399' : props.type === 'facility' ? '#fb923c' : '#60a5fa'
 )
+
+// For vehicles, group by shipType; for others, group by group
+const groupKey = (item) => isVehicle.value ? item.shipType : item.group
 
 const visibleGroups = computed(() => {
   const seen = new Set()
-  return items.value.map(i => i.group).filter(g => seen.has(g) ? false : seen.add(g))
+  return items.value.map(i => groupKey(i)).filter(g => seen.has(g) ? false : seen.add(g))
 })
 
 function itemsInGroup(group) {
-  return items.value.filter(i => i.group === group)
+  return items.value.filter(i => groupKey(i) === group)
 }
 
 function isUnlocked(item) {
+  if (isVehicle.value) {
+    if (!item.techReq) return true
+    return (store.researchedLevels[item.techReq.tech] || 0) >= item.techReq.level
+  }
   return item.requirements.every(r =>
     (store.researchedLevels[r.tech] || 0) >= r.level
   )
 }
 
-// Abbreviate long tech names for the req badge
+// For vehicles: show current tonnage based on researched tech level
+function vehicleTonnage(item) {
+  if (!item.techReq) return null
+  const techLevel = store.researchedLevels[item.techReq.tech] || 0
+  if (techLevel === 0) return null
+  return evalFormula(item.formulas.tonnage, techLevel)
+}
+
 function shortName(name) {
   if (name.length <= 12) return name
   return name.slice(0, 11) + '…'
+}
+
+function selectItem(item) {
+  if (isVehicle.value) {
+    store.selectItem(item, 'vehicle')
+  } else {
+    store.selectItem(item, props.type)
+  }
 }
 </script>
 
@@ -209,5 +242,13 @@ function shortName(name) {
   padding: 1px 5px;
   border-radius: 4px;
   white-space: nowrap;
+}
+
+.tonnage-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: #60a5fa;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 </style>

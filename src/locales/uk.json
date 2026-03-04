@@ -47,6 +47,9 @@
   "view_techs": "Технології",
   "view_components": "Компоненти",
   "view_facilities": "Споруди",
+  "view_vehicles": "Кораблі",
   "all_items": "Всі",
-  "unlock_status": "Статус"
+  "unlock_status": "Статус",
+  "unlocks_vehicles": "Розміри кораблів",
+  "stat_tonnage_short": "т"
 }

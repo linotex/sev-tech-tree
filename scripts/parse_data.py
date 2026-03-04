@@ -281,6 +281,46 @@ def parse_empire_bonuses() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Vehicle sizes parser  (VehicleSizes.txt)
+# ---------------------------------------------------------------------------
+
+def parse_vehicle_sizes() -> list[dict]:
+    content = read_game_file('VehicleSizes.txt')
+    raw_blocks = parse_blocks(content, name_key='Название')
+
+    sizes = []
+    for b in raw_blocks:
+        name = b.get('Название', '').strip()
+        if not name:
+            continue
+
+        req_count = int(b.get('Количество требований', 0))
+        tech_req = None
+        for i in range(1, req_count + 1):
+            formula = b.get(f'Формула требований {i}', '')
+            result = get_req_from_formula(formula)
+            if result:
+                tech_req = {'tech': result[0], 'level': result[1]}
+                break
+
+        sizes.append({
+            'name': name,
+            'shipType': b.get('Тип корабля', '').strip(),
+            'maxLevel': int(b.get('Максимальный уровень', 1)),
+            'techReq': tech_req,
+            'formulas': {
+                'tonnage':       b.get('Формула грузового места', '0').strip(),
+                'structure':     b.get('Формула структуры груза', '0').strip(),
+                'minerals':      b.get('Формула стоимости минералов', '0').strip(),
+                'organics':      b.get('Формула стоимости органики', '0').strip(),
+                'radioactives':  b.get('Формула стоимости радиоактивных элементов', '0').strip(),
+            },
+        })
+
+    return sizes
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -305,5 +345,8 @@ if __name__ == '__main__':
 
     print('Empire bonuses...')
     write_json(parse_empire_bonuses(), f'empire_bonuses_{LANG}.json')
+
+    print('Vehicle sizes...')
+    write_json(parse_vehicle_sizes(), f'vehicle_sizes_{LANG}.json')
 
     print('Done.')

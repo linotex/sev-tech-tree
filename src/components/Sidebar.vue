@@ -56,7 +56,21 @@
           </div>
         </template>
 
-        <div v-if="!results.techs.length && !results.components.length && !results.facilities.length" class="no-results">
+        <template v-if="results.vehicles.length">
+          <div class="results-label">{{ t('view_vehicles') }} ({{ results.vehicles.length }})</div>
+          <div
+            v-for="v in results.vehicles"
+            :key="'v-' + v.name"
+            class="result-item"
+            :class="{ active: store.selectedItem?.data?.name === v.name }"
+            @click="store.selectItem(v, 'vehicle')"
+          >
+            <span class="type-badge veh">К</span>
+            {{ v.name }}
+          </div>
+        </template>
+
+        <div v-if="!results.techs.length && !results.components.length && !results.facilities.length && !results.vehicles.length" class="no-results">
           {{ t('no_results') }}
         </div>
       </div>
@@ -199,7 +213,7 @@ function toggleGroup(group) {
   else store.setFilter(group)
 }
 
-const results = computed(() => store.searchResults || { techs: [], components: [], facilities: [] })
+const results = computed(() => store.searchResults || { techs: [], components: [], facilities: [], vehicles: [] })
 
 const researchedCount = computed(() =>
   Object.values(store.researchedLevels).filter(l => l > 0).length
@@ -210,17 +224,22 @@ const progressPct = computed(() =>
 
 // Item browser mode helpers
 const itemColor = computed(() =>
-  store.currentView === 'components' ? '#34d399' : '#fb923c'
+  store.currentView === 'components' ? '#34d399' : store.currentView === 'facilities' ? '#fb923c' : '#60a5fa'
 )
 const itemGroups = computed(() =>
-  store.currentView === 'components' ? store.componentGroups : store.facilityGroups
+  store.currentView === 'components' ? store.componentGroups
+  : store.currentView === 'facilities' ? store.facilityGroups
+  : store.vehicleSizeTypes
 )
 const itemCount = computed(() =>
-  store.currentView === 'components' ? store.components.length : store.facilities.length
+  store.currentView === 'components' ? store.components.length
+  : store.currentView === 'facilities' ? store.facilities.length
+  : store.vehicleSizes.length
 )
 function groupItemCount(group) {
-  const list = store.currentView === 'components' ? store.components : store.facilities
-  return list.filter(i => i.group === group).length
+  if (store.currentView === 'components') return store.components.filter(i => i.group === group).length
+  if (store.currentView === 'facilities') return store.facilities.filter(i => i.group === group).length
+  return store.vehicleSizes.filter(i => i.shipType === group).length
 }
 </script>
 
@@ -305,6 +324,7 @@ function groupItemCount(group) {
 .type-badge.tech { background: #1e3a5f; color: #60a5fa; }
 .type-badge.comp { background: #1a3a2a; color: #34d399; }
 .type-badge.fac  { background: #3a2a1a; color: #fb923c; }
+.type-badge.veh  { background: #1a2a3a; color: #60a5fa; }
 
 .no-results {
   padding: 20px 14px;

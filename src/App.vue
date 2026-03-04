@@ -13,6 +13,7 @@
           <button class="tab" :class="{ active: store.currentView === 'techs' }" @click="store.setView('techs')">{{ t('view_techs') }}</button>
           <button class="tab" :class="{ active: store.currentView === 'components' }" @click="store.setView('components')">{{ t('view_components') }}</button>
           <button class="tab" :class="{ active: store.currentView === 'facilities' }" @click="store.setView('facilities')">{{ t('view_facilities') }}</button>
+          <button class="tab" :class="{ active: store.currentView === 'vehicles' }" @click="store.setView('vehicles')">{{ t('view_vehicles') }}</button>
         </div>
 
         <span v-if="store.currentView === 'techs'" class="stat">
@@ -26,6 +27,9 @@
         </span>
         <span v-if="store.currentView === 'facilities'" class="stat">
           <span class="stat-val">{{ store.facilities.length }}</span> {{ t('view_facilities').toLowerCase() }}
+        </span>
+        <span v-if="store.currentView === 'vehicles'" class="stat">
+          <span class="stat-val">{{ store.vehicleSizes.length }}</span> {{ t('view_vehicles').toLowerCase() }}
         </span>
         <span v-if="store.selectedTech" class="stat-selected">
           ▶ {{ store.selectedTech.name }}
@@ -50,7 +54,7 @@
     <div class="main-content">
       <Sidebar />
       <TechGraph v-if="store.currentView === 'techs'" />
-      <ItemBrowser v-else :type="store.currentView === 'components' ? 'component' : 'facility'" />
+      <ItemBrowser v-else :type="store.currentView === 'components' ? 'component' : store.currentView === 'facilities' ? 'facility' : 'vehicle'" />
       <DetailPanel />
     </div>
   </div>

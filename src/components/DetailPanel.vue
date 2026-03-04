@@ -1,18 +1,14 @@
 <template>
   <aside class="detail-panel" :class="{ open: !!tech || !!store.selectedItem }">
 
-    <!-- Component / Facility view (from search) -->
+    <!-- Component / Facility / Vehicle view (from search or ItemBrowser) -->
     <template v-if="store.selectedItem">
       <div class="panel-header">
         <div class="tech-title">{{ store.selectedItem.data.name }}</div>
         <div class="tech-meta">
-          <span class="badge" :style="store.selectedItem.type === 'component'
-            ? 'background:#1a3a2a;color:#34d399'
-            : 'background:#3a2a1a;color:#fb923c'">
-            {{ store.selectedItem.type === 'component' ? t('type_component') : t('type_facility') }}
-          </span>
-          <span v-if="store.selectedItem.data.group" class="badge-cat">
-            {{ store.selectedItem.data.group }}
+          <span class="badge" :style="itemBadgeStyle">{{ itemBadgeLabel }}</span>
+          <span v-if="store.selectedItem.data.group || store.selectedItem.data.shipType" class="badge-cat">
+            {{ store.selectedItem.data.group || store.selectedItem.data.shipType }}
           </span>
         </div>
         <button class="close-btn" @click="store.selectItem(null)">✕</button>
@@ -22,28 +18,60 @@
           {{ store.selectedItem.data.description }}
         </div>
 
-        <!-- Stats for selected item -->
-        <ItemStats
-          :item="store.selectedItem.data"
-          :level="selectedItemLevel"
-          :show-fuel="store.selectedItem.type === 'component'"
-        />
-
-        <div v-if="store.selectedItem.data.requirements?.length" class="section">
-          <div class="section-title">{{ t('req_techs') }}</div>
-          <div
-            v-for="req in store.selectedItem.data.requirements"
-            :key="req.tech"
-            class="req-item"
-            :class="{ met: store.getResearchedLevel(req.tech) >= req.level }"
-            @click="goToTech(req.tech)"
-          >
-            <span class="req-icon">{{ store.getResearchedLevel(req.tech) >= req.level ? '✓' : '○' }}</span>
-            {{ req.tech }}
-            <span class="req-level">lvl {{ req.level }}</span>
+        <!-- Vehicle size: show level table -->
+        <template v-if="store.selectedItem.type === 'vehicle'">
+          <div class="section">
+            <div class="section-title">{{ t('stat_size') }}</div>
+            <div class="vehicle-stats">
+              <div
+                v-for="lvl in store.selectedItem.data.maxLevel"
+                :key="lvl"
+                class="vehicle-row"
+                :class="{ current: lvl === vehicleCurrentLevel }"
+              >
+                <span class="vlvl">{{ lvl }}</span>
+                <span class="vstat">{{ evalFormula(store.selectedItem.data.formulas.tonnage, lvl) }}{{ t('stat_tonnage_short') }}</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div v-else class="empty-note">{{ t('no_tech_req') }}</div>
+          <div v-if="store.selectedItem.data.techReq" class="section">
+            <div class="section-title">{{ t('req_techs') }}</div>
+            <div
+              class="req-item"
+              :class="{ met: store.getResearchedLevel(store.selectedItem.data.techReq.tech) >= store.selectedItem.data.techReq.level }"
+              @click="goToTech(store.selectedItem.data.techReq.tech)"
+            >
+              <span class="req-icon">{{ store.getResearchedLevel(store.selectedItem.data.techReq.tech) >= store.selectedItem.data.techReq.level ? '✓' : '○' }}</span>
+              {{ store.selectedItem.data.techReq.tech }}
+              <span class="req-level">lvl {{ store.selectedItem.data.techReq.level }}</span>
+            </div>
+          </div>
+        </template>
+
+        <!-- Component / Facility stats -->
+        <template v-else>
+          <ItemStats
+            :item="store.selectedItem.data"
+            :level="selectedItemLevel"
+            :show-fuel="store.selectedItem.type === 'component'"
+          />
+
+          <div v-if="store.selectedItem.data.requirements?.length" class="section">
+            <div class="section-title">{{ t('req_techs') }}</div>
+            <div
+              v-for="req in store.selectedItem.data.requirements"
+              :key="req.tech"
+              class="req-item"
+              :class="{ met: store.getResearchedLevel(req.tech) >= req.level }"
+              @click="goToTech(req.tech)"
+            >
+              <span class="req-icon">{{ store.getResearchedLevel(req.tech) >= req.level ? '✓' : '○' }}</span>
+              {{ req.tech }}
+              <span class="req-level">lvl {{ req.level }}</span>
+            </div>
+          </div>
+          <div v-else class="empty-note">{{ t('no_tech_req') }}</div>
+        </template>
       </div>
     </template>
 
@@ -135,7 +163,7 @@
                 lvl {{ c.reqLevel }}
               </span>
             </div>
-            <template v-if="expandedItems.has(c.name)">
+            <template v-if="expandedItems[c.name]">
               <div v-if="c.description" class="item-desc">{{ c.description }}</div>
               <ItemStats :item="c" :level="techEffectiveLevel(c)" :show-fuel="true" />
             </template>
@@ -157,7 +185,7 @@
                 lvl {{ f.reqLevel }}
               </span>
             </div>
-            <template v-if="expandedItems.has(f.name)">
+            <template v-if="expandedItems[f.name]">
               <div v-if="f.description" class="item-desc">{{ f.description }}</div>
               <ItemStats :item="f" :level="techEffectiveLevel(f)" :show-fuel="false" />
             </template>
@@ -179,7 +207,7 @@
                 lvl {{ b.reqLevel }}
               </span>
             </div>
-            <template v-if="expandedItems.has(b.name)">
+            <template v-if="expandedItems[b.name]">
               <div v-if="b.description" class="item-desc">{{ b.description }}</div>
               <div class="abilities bonus-abilities">
                 <div
@@ -194,8 +222,32 @@
           </div>
         </div>
 
+        <!-- Vehicle sizes -->
+        <div v-if="vehicleSizes.length" class="section">
+          <div class="section-title">{{ t('unlocks_vehicles') }} ({{ vehicleSizes.length }})</div>
+          <div
+            v-for="v in vehicleSizes"
+            :key="v.name"
+            class="item-card"
+            @click="toggleItem('v:' + v.name)"
+          >
+            <div class="item-name">
+              {{ v.name }}
+              <span class="badge-cat" style="font-size:11px">{{ v.shipType }}</span>
+            </div>
+            <template v-if="expandedItems['v:' + v.name]">
+              <div class="vehicle-stats">
+                <div v-for="lvl in v.maxLevel" :key="lvl" class="vehicle-row" :class="{ current: lvl === currentLevel }">
+                  <span class="vlvl">{{ lvl }}</span>
+                  <span class="vstat">{{ evalFormula(v.formulas.tonnage, lvl) }}{{ t('stat_tonnage_short') }}</span>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+
         <div
-          v-if="!tech.requirements.length && !unlocksTechs.length && !components.length && !facilities.length && !bonuses.length"
+          v-if="!tech.requirements.length && !unlocksTechs.length && !components.length && !facilities.length && !bonuses.length && !vehicleSizes.length"
           class="empty-note"
         >
           {{ t('no_deps') }}
@@ -210,16 +262,21 @@
 </template>
 
 <script setup>
-import { computed, reactive } from 'vue'
+import { computed, reactive, watch } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useTechStore } from '../stores/techStore'
 import { t } from '../i18n.js'
-import { renderAbilityDesc, effectiveLevel } from '../formulaUtil.js'
+import { evalFormula, renderAbilityDesc, effectiveLevel } from '../formulaUtil.js'
 import ItemStats from './ItemStats.vue'
 
 const store = useTechStore()
 const { selectedTech: tech } = storeToRefs(store)
-const expandedItems = reactive(new Set())
+const expandedItems = reactive({})
+
+// Clear expanded state whenever selected tech or item changes
+watch([tech, () => store.selectedItem], () => {
+  Object.keys(expandedItems).forEach(k => delete expandedItems[k])
+})
 
 const GROUP_COLORS = {
   'Культура':            '#c084fc',
@@ -230,6 +287,24 @@ const GROUP_COLORS = {
 function groupColor(g) { return GROUP_COLORS[g] || '#94a3b8' }
 
 const currentLevel = computed(() => store.getResearchedLevel(tech.value?.name))
+
+const itemBadgeStyle = computed(() => {
+  const type = store.selectedItem?.type
+  if (type === 'component') return 'background:#1a3a2a;color:#34d399'
+  if (type === 'facility')  return 'background:#3a2a1a;color:#fb923c'
+  return 'background:#1a2a3a;color:#60a5fa'
+})
+const itemBadgeLabel = computed(() => {
+  const type = store.selectedItem?.type
+  if (type === 'component') return t('type_component')
+  if (type === 'facility')  return t('type_facility')
+  return t('view_vehicles')
+})
+const vehicleCurrentLevel = computed(() => {
+  const v = store.selectedItem?.data
+  if (!v?.techReq) return 0
+  return store.getResearchedLevel(v.techReq.tech)
+})
 
 // Level to use when showing stats for components/facilities under a tech.
 // Use max(currentLevel, reqLevel) so a component that requires lvl 3
@@ -257,9 +332,10 @@ const unlocksTechs = computed(() => {
     .sort((a, b) => a.reqLevel - b.reqLevel)
 })
 
-const components = computed(() => tech.value ? store.unlockedComponents(tech.value.name) : [])
-const facilities = computed(() => tech.value ? store.unlockedFacilities(tech.value.name) : [])
-const bonuses    = computed(() => tech.value ? store.unlockedBonuses(tech.value.name) : [])
+const components    = computed(() => tech.value ? store.unlockedComponents(tech.value.name) : [])
+const facilities    = computed(() => tech.value ? store.unlockedFacilities(tech.value.name) : [])
+const bonuses       = computed(() => tech.value ? store.unlockedBonuses(tech.value.name) : [])
+const vehicleSizes  = computed(() => tech.value ? store.unlockedVehicleSizes(tech.value.name) : [])
 
 function incLevel() {
   if (tech.value && currentLevel.value < tech.value.maxLevel)
@@ -275,8 +351,7 @@ function goToTech(techName) {
   if (found) store.selectTech(found)
 }
 function toggleItem(name) {
-  if (expandedItems.has(name)) expandedItems.delete(name)
-  else expandedItems.add(name)
+  expandedItems[name] = !expandedItems[name]
 }
 </script>
 
@@ -401,6 +476,33 @@ function toggleItem(name) {
 }
 
 .empty-note { font-size: 12px; color: var(--text-dim); font-style: italic; text-align: center; padding: 8px; }
+
+.vehicle-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+.vehicle-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 3px 7px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+.vehicle-row.current {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.vlvl {
+  font-weight: 600;
+  min-width: 14px;
+}
+.vstat { color: inherit; }
 
 .description-box {
   background: var(--bg-card); border-radius: 8px; padding: 12px;

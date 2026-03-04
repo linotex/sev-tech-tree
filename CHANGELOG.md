@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.3.0] — 2026-03-04
+
+### Added
+- Ships tab: browse all 102 vehicle sizes (Ship, Base, Fighter, Drone, etc.) grouped by type
+- Ship detail panel: tonnage table per level with current level highlighted
+- Tech detail panel: "Ship sizes" section showing which hulls a tech unlocks
+- Vehicle sizes included in global search results
+
+### Fixed
+- Expanding one item in detail panel no longer expands all items (expandedItems cleared on tech/item switch)
+
 ## [1.2.1] — 2026-03-04
 
 ### Changed

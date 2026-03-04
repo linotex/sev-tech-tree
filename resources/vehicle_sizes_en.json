@@ -1,0 +1,1634 @@
+[
+  {
+    "name": "Фрегат",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "250 + (([%Level%] - 1) * 25)",
+      "structure": "250 + (([%Level%] - 1) * 25)",
+      "minerals": "200 + (([%Level%] - 1) * 25)",
+      "organics": "50 + (([%Level%] - 1) * 25)",
+      "radioactives": "50 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Эсминец",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во ср. и легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "300 + (([%Level%] - 1) * 25)",
+      "organics": "75 + (([%Level%] - 1) * 25)",
+      "radioactives": "75 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Легкий крейсер",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "450 + (([%Level%] - 1) * 25)",
+      "structure": "450 + (([%Level%] - 1) * 25)",
+      "minerals": "400 + (([%Level%] - 1) * 25)",
+      "organics": "100 + (([%Level%] - 1) * 25)",
+      "radioactives": "100 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Крейсер",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во ср. и тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "550 + (([%Level%] - 1) * 50)",
+      "structure": "550 + (([%Level%] - 1) * 50)",
+      "minerals": "500 + (([%Level%] - 1) * 50)",
+      "organics": "125 + (([%Level%] - 1) * 50)",
+      "radioactives": "125 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Линкор",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "850 + (([%Level%] - 1) * 50)",
+      "structure": "850 + (([%Level%] - 1) * 50)",
+      "minerals": "800 + (([%Level%] - 1) * 50)",
+      "organics": "200 + (([%Level%] - 1) * 50)",
+      "radioactives": "200 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Дредноут",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во огромных корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1250 + (([%Level%] - 1) * 50)",
+      "structure": "1250 + (([%Level%] - 1) * 50)",
+      "minerals": "1200 + (([%Level%] - 1) * 50)",
+      "organics": "300 + (([%Level%] - 1) * 50)",
+      "radioactives": "300 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во корабля-базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1550 + (([%Level%] - 1) * 100)",
+      "structure": "1550 + (([%Level%] - 1) * 100)",
+      "minerals": "1500 + (([%Level%] - 1) * 100)",
+      "organics": "375 + (([%Level%] - 1) * 100)",
+      "radioactives": "375 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Легкий корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "850 + (([%Level%] - 1) * 50)",
+      "structure": "850 + (([%Level%] - 1) * 50)",
+      "minerals": "400 + (([%Level%] - 1) * 50)",
+      "organics": "100 + (([%Level%] - 1) * 50)",
+      "radioactives": "100 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1050 + (([%Level%] - 1) * 50)",
+      "structure": "1050 + (([%Level%] - 1) * 50)",
+      "minerals": "500 + (([%Level%] - 1) * 50)",
+      "organics": "125 + (([%Level%] - 1) * 50)",
+      "radioactives": "125 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Тяжелый корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1250 + (([%Level%] - 1) * 50)",
+      "structure": "1250 + (([%Level%] - 1) * 50)",
+      "minerals": "600 + (([%Level%] - 1) * 50)",
+      "organics": "150 + (([%Level%] - 1) * 50)",
+      "radioactives": "150 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Космическая станция",
+    "shipType": "База",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Строительство базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "600 + (([%Level%] - 1) * 100)",
+      "structure": "600 + (([%Level%] - 1) * 100)",
+      "minerals": "500 + (([%Level%] - 1) * 100)",
+      "organics": "125 + (([%Level%] - 1) * 100)",
+      "radioactives": "125 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Звездная база",
+    "shipType": "База",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во большой базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "2500 + (([%Level%] - 1) * 100)",
+      "structure": "2500 + (([%Level%] - 1) * 100)",
+      "minerals": "2500 + (([%Level%] - 1) * 100)",
+      "organics": "625 + (([%Level%] - 1) * 100)",
+      "radioactives": "625 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Колонизатор",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "150 + (([%Level%] - 1) * 25)",
+      "organics": "35 + (([%Level%] - 1) * 25)",
+      "radioactives": "35 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Малый транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "150 + (([%Level%] - 1) * 25)",
+      "organics": "35 + (([%Level%] - 1) * 25)",
+      "radioactives": "35 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Средний транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "650 + (([%Level%] - 1) * 25)",
+      "structure": "650 + (([%Level%] - 1) * 25)",
+      "minerals": "300 + (([%Level%] - 1) * 25)",
+      "organics": "75 + (([%Level%] - 1) * 25)",
+      "radioactives": "75 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Большой транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "950 + (([%Level%] - 1) * 25)",
+      "structure": "950 + (([%Level%] - 1) * 25)",
+      "minerals": "450 + (([%Level%] - 1) * 25)",
+      "organics": "100 + (([%Level%] - 1) * 25)",
+      "radioactives": "100 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Маленький истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "35 + (([%Level%] - 1) * 5)",
+      "structure": "35 + (([%Level%] - 1) * 5)",
+      "minerals": "100 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Средний истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "50 + (([%Level%] - 1) * 5)",
+      "structure": "50 + (([%Level%] - 1) * 5)",
+      "minerals": "200 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Большой истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "65 + (([%Level%] - 1) * 5)",
+      "structure": "65 + (([%Level%] - 1) * 5)",
+      "minerals": "300 + (([%Level%] - 1) * 10)",
+      "organics": "125 + (([%Level%] - 1) * 10)",
+      "radioactives": "125 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Маленький спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "80 + (([%Level%] - 1) * 2)",
+      "structure": "80 + (([%Level%] - 1) * 2)",
+      "minerals": "80 + (([%Level%] - 1) * 10)",
+      "organics": "20 + (([%Level%] - 1) * 10)",
+      "radioactives": "20 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Средний спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "100 + (([%Level%] - 1) * 2)",
+      "structure": "100 + (([%Level%] - 1) * 2)",
+      "minerals": "100 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Большой спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "120 + (([%Level%] - 1) * 2)",
+      "structure": "120 + (([%Level%] - 1) * 2)",
+      "minerals": "120 + (([%Level%] - 1) * 10)",
+      "organics": "30 + (([%Level%] - 1) * 10)",
+      "radioactives": "30 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Маленькая мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "10 + (([%Level%] - 1) * 1)",
+      "structure": "10 + (([%Level%] - 1) * 1)",
+      "minerals": "100 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Средняя мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "15 + (([%Level%] - 1) * 1)",
+      "structure": "15 + (([%Level%] - 1) * 1)",
+      "minerals": "150 + (([%Level%] - 1) * 10)",
+      "organics": "35 + (([%Level%] - 1) * 10)",
+      "radioactives": "35 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Большая мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "20 + (([%Level%] - 1) * 1)",
+      "structure": "20 + (([%Level%] - 1) * 1)",
+      "minerals": "200 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Маленький десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "10 + (([%Level%] - 1) * 1)",
+      "structure": "10 + (([%Level%] - 1) * 1)",
+      "minerals": "100 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Средний десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "15 + (([%Level%] - 1) * 1)",
+      "structure": "15 + (([%Level%] - 1) * 1)",
+      "minerals": "150 + (([%Level%] - 1) * 10)",
+      "organics": "35 + (([%Level%] - 1) * 10)",
+      "radioactives": "35 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Большой десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "20 + (([%Level%] - 1) * 1)",
+      "structure": "20 + (([%Level%] - 1) * 1)",
+      "minerals": "200 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Маленькая оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "200 + (([%Level%] - 1) * 5)",
+      "structure": "200 + (([%Level%] - 1) * 5)",
+      "minerals": "100 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Средняя оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "400 + (([%Level%] - 1) * 5)",
+      "structure": "400 + (([%Level%] - 1) * 5)",
+      "minerals": "200 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Большая оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "600 + (([%Level%] - 1) * 5)",
+      "structure": "600 + (([%Level%] - 1) * 5)",
+      "minerals": "300 + (([%Level%] - 1) * 10)",
+      "organics": "75 + (([%Level%] - 1) * 10)",
+      "radioactives": "75 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Маленький дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "150 + (([%Level%] - 1) * 5)",
+      "structure": "150 + (([%Level%] - 1) * 5)",
+      "minerals": "120 + (([%Level%] - 1) * 10)",
+      "organics": "30 + (([%Level%] - 1) * 10)",
+      "radioactives": "30 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Средний дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "200 + (([%Level%] - 1) * 5)",
+      "structure": "200 + (([%Level%] - 1) * 5)",
+      "minerals": "160 + (([%Level%] - 1) * 10)",
+      "organics": "40 + (([%Level%] - 1) * 10)",
+      "radioactives": "40 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Большой дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "250 + (([%Level%] - 1) * 5)",
+      "structure": "250 + (([%Level%] - 1) * 5)",
+      "minerals": "200 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический фрегат",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "250 + (([%Level%] - 1) * 25)",
+      "structure": "250 + (([%Level%] - 1) * 25)",
+      "minerals": "50 + (([%Level%] - 1) * 25)",
+      "organics": "200 + (([%Level%] - 1) * 25)",
+      "radioactives": "50 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Органический эсминец",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во ср. и легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "75 + (([%Level%] - 1) * 25)",
+      "organics": "300 + (([%Level%] - 1) * 25)",
+      "radioactives": "75 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Органический легкий крейсер",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "450 + (([%Level%] - 1) * 25)",
+      "structure": "450 + (([%Level%] - 1) * 25)",
+      "minerals": "100 + (([%Level%] - 1) * 25)",
+      "organics": "400 + (([%Level%] - 1) * 25)",
+      "radioactives": "100 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Органический крейсер",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во ср. и тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "550 + (([%Level%] - 1) * 50)",
+      "structure": "550 + (([%Level%] - 1) * 50)",
+      "minerals": "125 + (([%Level%] - 1) * 50)",
+      "organics": "500 + (([%Level%] - 1) * 50)",
+      "radioactives": "125 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Органический линкор",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "850 + (([%Level%] - 1) * 50)",
+      "structure": "850 + (([%Level%] - 1) * 50)",
+      "minerals": "200 + (([%Level%] - 1) * 50)",
+      "organics": "800 + (([%Level%] - 1) * 50)",
+      "radioactives": "200 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Органический дредноут",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во огромных корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1250 + (([%Level%] - 1) * 100)",
+      "structure": "1250 + (([%Level%] - 1) * 100)",
+      "minerals": "300 + (([%Level%] - 1) * 100)",
+      "organics": "1200 + (([%Level%] - 1) * 100)",
+      "radioactives": "300 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Органический корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во корабля-базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1550 + (([%Level%] - 1) * 100)",
+      "structure": "1550 + (([%Level%] - 1) * 100)",
+      "minerals": "350 + (([%Level%] - 1) * 100)",
+      "organics": "1500 + (([%Level%] - 1) * 100)",
+      "radioactives": "350 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Орган. легкий корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "850 + (([%Level%] - 1) * 50)",
+      "structure": "850 + (([%Level%] - 1) * 50)",
+      "minerals": "100 + (([%Level%] - 1) * 50)",
+      "organics": "400 + (([%Level%] - 1) * 50)",
+      "radioactives": "100 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Органический корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1050 + (([%Level%] - 1) * 50)",
+      "structure": "1050 + (([%Level%] - 1) * 50)",
+      "minerals": "125 + (([%Level%] - 1) * 50)",
+      "organics": "500 + (([%Level%] - 1) * 50)",
+      "radioactives": "125 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Орган. тяжелый корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1250 + (([%Level%] - 1) * 50)",
+      "structure": "1250 + (([%Level%] - 1) * 50)",
+      "minerals": "150 + (([%Level%] - 1) * 50)",
+      "organics": "600 + (([%Level%] - 1) * 50)",
+      "radioactives": "150 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Органич. космическая станция",
+    "shipType": "База",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Строительство базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "600 + (([%Level%] - 1) * 100)",
+      "structure": "600 + (([%Level%] - 1) * 100)",
+      "minerals": "125 + (([%Level%] - 1) * 100)",
+      "organics": "500 + (([%Level%] - 1) * 100)",
+      "radioactives": "125 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Органическая звездная база",
+    "shipType": "База",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во большой базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "2500 + (([%Level%] - 1) * 100)",
+      "structure": "2500 + (([%Level%] - 1) * 100)",
+      "minerals": "625 + (([%Level%] - 1) * 100)",
+      "organics": "2500 + (([%Level%] - 1) * 100)",
+      "radioactives": "625 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Органический колонизатор",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "35 + (([%Level%] - 1) * 25)",
+      "organics": "150 + (([%Level%] - 1) * 25)",
+      "radioactives": "35 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Органический малый транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "35 + (([%Level%] - 1) * 25)",
+      "organics": "150 + (([%Level%] - 1) * 25)",
+      "radioactives": "35 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Органич. средний транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "650 + (([%Level%] - 1) * 25)",
+      "structure": "650 + (([%Level%] - 1) * 25)",
+      "minerals": "75 + (([%Level%] - 1) * 25)",
+      "organics": "300 + (([%Level%] - 1) * 25)",
+      "radioactives": "75 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Органич. большой транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "950 + (([%Level%] - 1) * 25)",
+      "structure": "950 + (([%Level%] - 1) * 25)",
+      "minerals": "100 + (([%Level%] - 1) * 25)",
+      "organics": "450 + (([%Level%] - 1) * 25)",
+      "radioactives": "100 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Орган. маленький истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "35 + (([%Level%] - 1) * 5)",
+      "structure": "35 + (([%Level%] - 1) * 5)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "100 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический средний истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "50 + (([%Level%] - 1) * 5)",
+      "structure": "50 + (([%Level%] - 1) * 5)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "200 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органич. большой истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "65 + (([%Level%] - 1) * 5)",
+      "structure": "65 + (([%Level%] - 1) * 5)",
+      "minerals": "75 + (([%Level%] - 1) * 10)",
+      "organics": "300 + (([%Level%] - 1) * 10)",
+      "radioactives": "75 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический малый спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "80 + (([%Level%] - 1) * 2)",
+      "structure": "80 + (([%Level%] - 1) * 2)",
+      "minerals": "20 + (([%Level%] - 1) * 10)",
+      "organics": "80 + (([%Level%] - 1) * 10)",
+      "radioactives": "20 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический средний спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "100 + (([%Level%] - 1) * 2)",
+      "structure": "100 + (([%Level%] - 1) * 2)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "100 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический большой спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "120 + (([%Level%] - 1) * 2)",
+      "structure": "120 + (([%Level%] - 1) * 2)",
+      "minerals": "30 + (([%Level%] - 1) * 10)",
+      "organics": "120 + (([%Level%] - 1) * 10)",
+      "radioactives": "30 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органическая маленькая мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "10 + (([%Level%] - 1) * 1)",
+      "structure": "10 + (([%Level%] - 1) * 1)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "100 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органическая средняя мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "15 + (([%Level%] - 1) * 1)",
+      "structure": "15 + (([%Level%] - 1) * 1)",
+      "minerals": "35 + (([%Level%] - 1) * 10)",
+      "organics": "150 + (([%Level%] - 1) * 10)",
+      "radioactives": "35 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органическая большая мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "20 + (([%Level%] - 1) * 1)",
+      "structure": "20 + (([%Level%] - 1) * 1)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "200 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Орган. маленький десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "10 + (([%Level%] - 1) * 1)",
+      "structure": "10 + (([%Level%] - 1) * 1)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "100 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Орган. средний десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "15 + (([%Level%] - 1) * 1)",
+      "structure": "15 + (([%Level%] - 1) * 1)",
+      "minerals": "35 + (([%Level%] - 1) * 10)",
+      "organics": "150 + (([%Level%] - 1) * 10)",
+      "radioactives": "35 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Орган. большой десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "20 + (([%Level%] - 1) * 1)",
+      "structure": "20 + (([%Level%] - 1) * 1)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "200 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органическая маленькая оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "200 + (([%Level%] - 1) * 5)",
+      "structure": "200 + (([%Level%] - 1) * 5)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "100 + (([%Level%] - 1) * 10)",
+      "radioactives": "25 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органическая средняя оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "400 + (([%Level%] - 1) * 5)",
+      "structure": "400 + (([%Level%] - 1) * 5)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "200 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органическая большая оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "600 + (([%Level%] - 1) * 5)",
+      "structure": "600 + (([%Level%] - 1) * 5)",
+      "minerals": "75 + (([%Level%] - 1) * 10)",
+      "organics": "300 + (([%Level%] - 1) * 10)",
+      "radioactives": "75 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический маленький дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "150 + (([%Level%] - 1) * 5)",
+      "structure": "150 + (([%Level%] - 1) * 5)",
+      "minerals": "30 + (([%Level%] - 1) * 10)",
+      "organics": "120 + (([%Level%] - 1) * 10)",
+      "radioactives": "30 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический средний дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "200 + (([%Level%] - 1) * 5)",
+      "structure": "200 + (([%Level%] - 1) * 5)",
+      "minerals": "40 + (([%Level%] - 1) * 10)",
+      "organics": "160 + (([%Level%] - 1) * 10)",
+      "radioactives": "40 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Органический большой дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "250 + (([%Level%] - 1) * 5)",
+      "structure": "250 + (([%Level%] - 1) * 5)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "200 + (([%Level%] - 1) * 10)",
+      "radioactives": "50 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. фрегат",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "250 + (([%Level%] - 1) * 25)",
+      "structure": "250 + (([%Level%] - 1) * 25)",
+      "minerals": "50 + (([%Level%] - 1) * 25)",
+      "organics": "50 + (([%Level%] - 1) * 25)",
+      "radioactives": "200 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. эсминец",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во ср. и легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "75 + (([%Level%] - 1) * 25)",
+      "organics": "75 + (([%Level%] - 1) * 25)",
+      "radioactives": "300 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. легкий крейсер",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "450 + (([%Level%] - 1) * 25)",
+      "structure": "450 + (([%Level%] - 1) * 25)",
+      "minerals": "100 + (([%Level%] - 1) * 25)",
+      "organics": "100 + (([%Level%] - 1) * 25)",
+      "radioactives": "400 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. крейсер",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во ср. и тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "550 + (([%Level%] - 1) * 50)",
+      "structure": "550 + (([%Level%] - 1) * 50)",
+      "minerals": "125 + (([%Level%] - 1) * 50)",
+      "organics": "125 + (([%Level%] - 1) * 50)",
+      "radioactives": "500 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Кристал. линкор",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "850 + (([%Level%] - 1) * 50)",
+      "structure": "850 + (([%Level%] - 1) * 50)",
+      "minerals": "200 + (([%Level%] - 1) * 50)",
+      "organics": "200 + (([%Level%] - 1) * 50)",
+      "radioactives": "800 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Кристал. дредноут",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во огромных корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1250 + (([%Level%] - 1) * 100)",
+      "structure": "1250 + (([%Level%] - 1) * 100)",
+      "minerals": "300 + (([%Level%] - 1) * 100)",
+      "organics": "300 + (([%Level%] - 1) * 100)",
+      "radioactives": "1200 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Кристал. корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во корабля-базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1550 + (([%Level%] - 1) * 100)",
+      "structure": "1550 + (([%Level%] - 1) * 100)",
+      "minerals": "350 + (([%Level%] - 1) * 100)",
+      "organics": "350 + (([%Level%] - 1) * 100)",
+      "radioactives": "1500 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Кристал. легкий корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "850 + (([%Level%] - 1) * 50)",
+      "structure": "850 + (([%Level%] - 1) * 50)",
+      "minerals": "100 + (([%Level%] - 1) * 50)",
+      "organics": "100 + (([%Level%] - 1) * 50)",
+      "radioactives": "400 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Кристал. корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1050 + (([%Level%] - 1) * 50)",
+      "structure": "1050 + (([%Level%] - 1) * 50)",
+      "minerals": "125 + (([%Level%] - 1) * 50)",
+      "organics": "125 + (([%Level%] - 1) * 50)",
+      "radioactives": "500 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Кристал. тяж. корабль-база",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "1250 + (([%Level%] - 1) * 50)",
+      "structure": "1250 + (([%Level%] - 1) * 50)",
+      "minerals": "175 + (([%Level%] - 1) * 50)",
+      "organics": "175 + (([%Level%] - 1) * 50)",
+      "radioactives": "600 + (([%Level%] - 1) * 50)"
+    }
+  },
+  {
+    "name": "Кристал. космическая станция",
+    "shipType": "База",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Строительство базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "600 + (([%Level%] - 1) * 100)",
+      "structure": "600 + (([%Level%] - 1) * 100)",
+      "minerals": "125 + (([%Level%] - 1) * 100)",
+      "organics": "125 + (([%Level%] - 1) * 100)",
+      "radioactives": "500 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Кристал. звездная база",
+    "shipType": "База",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во большой базы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "2500 + (([%Level%] - 1) * 100)",
+      "structure": "2500 + (([%Level%] - 1) * 100)",
+      "minerals": "625 + (([%Level%] - 1) * 100)",
+      "organics": "625 + (([%Level%] - 1) * 100)",
+      "radioactives": "2500 + (([%Level%] - 1) * 100)"
+    }
+  },
+  {
+    "name": "Кристал. колонизатор",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "35 + (([%Level%] - 1) * 25)",
+      "organics": "35 + (([%Level%] - 1) * 25)",
+      "radioactives": "150 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. малый транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во легких корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "350 + (([%Level%] - 1) * 25)",
+      "structure": "350 + (([%Level%] - 1) * 25)",
+      "minerals": "35 + (([%Level%] - 1) * 25)",
+      "organics": "35 + (([%Level%] - 1) * 25)",
+      "radioactives": "150 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. средний транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во средних корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "650 + (([%Level%] - 1) * 25)",
+      "structure": "650 + (([%Level%] - 1) * 25)",
+      "minerals": "75 + (([%Level%] - 1) * 25)",
+      "organics": "75 + (([%Level%] - 1) * 25)",
+      "radioactives": "300 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. большой транспорт",
+    "shipType": "Корабль",
+    "maxLevel": 10,
+    "techReq": {
+      "tech": "Стр-во тяжелых корпусов",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "950 + (([%Level%] - 1) * 25)",
+      "structure": "950 + (([%Level%] - 1) * 25)",
+      "minerals": "100 + (([%Level%] - 1) * 25)",
+      "organics": "100 + (([%Level%] - 1) * 25)",
+      "radioactives": "450 + (([%Level%] - 1) * 25)"
+    }
+  },
+  {
+    "name": "Кристал. маленький истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "35 + (([%Level%] - 1) * 5)",
+      "structure": "35 + (([%Level%] - 1) * 5)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "100 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. средний истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "50 + (([%Level%] - 1) * 5)",
+      "structure": "50 + (([%Level%] - 1) * 5)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "200 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. большой истребитель",
+    "shipType": "Истребитель",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Истребители",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "65 + (([%Level%] - 1) * 5)",
+      "structure": "65 + (([%Level%] - 1) * 5)",
+      "minerals": "75 + (([%Level%] - 1) * 10)",
+      "organics": "75 + (([%Level%] - 1) * 10)",
+      "radioactives": "300 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. маленький спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "80 + (([%Level%] - 1) * 2)",
+      "structure": "80 + (([%Level%] - 1) * 2)",
+      "minerals": "20 + (([%Level%] - 1) * 10)",
+      "organics": "20 + (([%Level%] - 1) * 10)",
+      "radioactives": "80 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. средний спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "100 + (([%Level%] - 1) * 2)",
+      "structure": "100 + (([%Level%] - 1) * 2)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "100 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. большой спутник",
+    "shipType": "Спутник",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Спутники",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "120 + (([%Level%] - 1) * 2)",
+      "structure": "120 + (([%Level%] - 1) * 2)",
+      "minerals": "30 + (([%Level%] - 1) * 10)",
+      "organics": "30 + (([%Level%] - 1) * 10)",
+      "radioactives": "120 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. маленькая мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "10 + (([%Level%] - 1) * 1)",
+      "structure": "10 + (([%Level%] - 1) * 1)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "100 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. средняя мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "15 + (([%Level%] - 1) * 1)",
+      "structure": "15 + (([%Level%] - 1) * 1)",
+      "minerals": "35 + (([%Level%] - 1) * 10)",
+      "organics": "35 + (([%Level%] - 1) * 10)",
+      "radioactives": "150 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. большая мина",
+    "shipType": "Мина",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Мины",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "20 + (([%Level%] - 1) * 1)",
+      "structure": "20 + (([%Level%] - 1) * 1)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "200 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. мал. десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "10 + (([%Level%] - 1) * 1)",
+      "structure": "10 + (([%Level%] - 1) * 1)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "100 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. средний десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "15 + (([%Level%] - 1) * 1)",
+      "structure": "15 + (([%Level%] - 1) * 1)",
+      "minerals": "35 + (([%Level%] - 1) * 10)",
+      "organics": "35 + (([%Level%] - 1) * 10)",
+      "radioactives": "150 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. большой десантный корабль",
+    "shipType": "Десант",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Десант",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "20 + (([%Level%] - 1) * 1)",
+      "structure": "20 + (([%Level%] - 1) * 1)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "200 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. мал. оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "200 + (([%Level%] - 1) * 5)",
+      "structure": "200 + (([%Level%] - 1) * 5)",
+      "minerals": "25 + (([%Level%] - 1) * 10)",
+      "organics": "25 + (([%Level%] - 1) * 10)",
+      "radioactives": "100 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. ср. оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "400 + (([%Level%] - 1) * 5)",
+      "structure": "400 + (([%Level%] - 1) * 5)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "200 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. бол. оружейная платформа",
+    "shipType": "Оружейная платформа",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Оружейные платформы",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "600 + (([%Level%] - 1) * 5)",
+      "structure": "600 + (([%Level%] - 1) * 5)",
+      "minerals": "75 + (([%Level%] - 1) * 10)",
+      "organics": "75 + (([%Level%] - 1) * 10)",
+      "radioactives": "300 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. маленький дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 1
+    },
+    "formulas": {
+      "tonnage": "150 + (([%Level%] - 1) * 5)",
+      "structure": "150 + (([%Level%] - 1) * 5)",
+      "minerals": "30 + (([%Level%] - 1) * 10)",
+      "organics": "30 + (([%Level%] - 1) * 10)",
+      "radioactives": "120 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. средний дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 4
+    },
+    "formulas": {
+      "tonnage": "200 + (([%Level%] - 1) * 5)",
+      "structure": "200 + (([%Level%] - 1) * 5)",
+      "minerals": "40 + (([%Level%] - 1) * 10)",
+      "organics": "40 + (([%Level%] - 1) * 10)",
+      "radioactives": "160 + (([%Level%] - 1) * 10)"
+    }
+  },
+  {
+    "name": "Кристал. большой дрон",
+    "shipType": "Дрон",
+    "maxLevel": 3,
+    "techReq": {
+      "tech": "Дроны",
+      "level": 7
+    },
+    "formulas": {
+      "tonnage": "250 + (([%Level%] - 1) * 5)",
+      "structure": "250 + (([%Level%] - 1) * 5)",
+      "minerals": "50 + (([%Level%] - 1) * 10)",
+      "organics": "50 + (([%Level%] - 1) * 10)",
+      "radioactives": "200 + (([%Level%] - 1) * 10)"
+    }
+  }
+]

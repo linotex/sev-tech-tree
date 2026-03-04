@@ -47,6 +47,9 @@
   "view_techs": "Technologies",
   "view_components": "Components",
   "view_facilities": "Facilities",
+  "view_vehicles": "Ships",
   "all_items": "All",
-  "unlock_status": "Status"
+  "unlock_status": "Status",
+  "unlocks_vehicles": "Ship sizes",
+  "stat_tonnage_short": "t"
 }
