@@ -233,7 +233,9 @@
           >
             <div class="item-name">
               {{ v.name }}
-              <span class="badge-cat" style="font-size:11px">{{ v.shipType }}</span>
+              <span class="req-level-badge" :class="{ unlocked: currentLevel >= v.reqLevel }">
+                lvl {{ v.reqLevel }}
+              </span>
             </div>
             <template v-if="expandedItems['v:' + v.name]">
               <div class="vehicle-stats">
