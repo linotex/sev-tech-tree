@@ -7,11 +7,25 @@
       </div>
       <div class="topbar-center">
         <span v-if="version" class="version-badge">v{{ version }}</span>
-        <span class="stat">
+
+        <!-- View tabs -->
+        <div class="view-tabs">
+          <button class="tab" :class="{ active: store.currentView === 'techs' }" @click="store.setView('techs')">{{ t('view_techs') }}</button>
+          <button class="tab" :class="{ active: store.currentView === 'components' }" @click="store.setView('components')">{{ t('view_components') }}</button>
+          <button class="tab" :class="{ active: store.currentView === 'facilities' }" @click="store.setView('facilities')">{{ t('view_facilities') }}</button>
+        </div>
+
+        <span v-if="store.currentView === 'techs'" class="stat">
           <span class="stat-val">{{ store.techs.length }}</span> {{ t('stat_techs') }}
         </span>
-        <span class="stat">
+        <span v-if="store.currentView === 'techs'" class="stat">
           <span class="stat-val">{{ researchedCount }}</span> {{ t('stat_researched') }}
+        </span>
+        <span v-if="store.currentView === 'components'" class="stat">
+          <span class="stat-val">{{ store.components.length }}</span> {{ t('view_components').toLowerCase() }}
+        </span>
+        <span v-if="store.currentView === 'facilities'" class="stat">
+          <span class="stat-val">{{ store.facilities.length }}</span> {{ t('view_facilities').toLowerCase() }}
         </span>
         <span v-if="store.selectedTech" class="stat-selected">
           ▶ {{ store.selectedTech.name }}
@@ -35,7 +49,8 @@
 
     <div class="main-content">
       <Sidebar />
-      <TechGraph />
+      <TechGraph v-if="store.currentView === 'techs'" />
+      <ItemBrowser v-else :type="store.currentView === 'components' ? 'component' : 'facility'" />
       <DetailPanel />
     </div>
   </div>
@@ -53,6 +68,7 @@ import { useTechStore } from './stores/techStore'
 import Sidebar from './components/Sidebar.vue'
 import TechGraph from './components/TechGraph.vue'
 import DetailPanel from './components/DetailPanel.vue'
+import ItemBrowser from './components/ItemBrowser.vue'
 
 const store = useTechStore()
 
@@ -105,8 +121,36 @@ function resetProgress() {
   flex: 1;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   min-width: 0;
+}
+
+.view-tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 2px;
+  flex-shrink: 0;
+}
+
+.tab {
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  transition: all 0.15s;
+}
+.tab:hover { background: var(--bg-hover); color: var(--text); }
+.tab.active {
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
 }
 
 .stat {

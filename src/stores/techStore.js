@@ -27,11 +27,36 @@ export const useTechStore = defineStore('tech', {
     filterGroup: null,
     filterCategory: null,
     searchQuery: '',
-    highlightPath: null // set of tech names on path to selected
+    highlightPath: null, // set of tech names on path to selected
+    currentView: 'techs', // 'techs' | 'components' | 'facilities'
+    itemFilterGroup: null
   }),
 
   getters: {
     groups: (state) => [...new Set(state.techs.map(t => t.group))].sort(),
+
+    componentGroups: (state) => [...new Set(state.components.map(c => c.group))].sort(),
+    facilityGroups: (state) => [...new Set(state.facilities.map(f => f.group))].sort(),
+
+    filteredComponents: (state) => {
+      let result = state.components
+      if (state.itemFilterGroup) result = result.filter(c => c.group === state.itemFilterGroup)
+      if (state.searchQuery) {
+        const q = state.searchQuery.toLowerCase()
+        result = result.filter(c => c.name.toLowerCase().includes(q))
+      }
+      return result
+    },
+
+    filteredFacilities: (state) => {
+      let result = state.facilities
+      if (state.itemFilterGroup) result = result.filter(f => f.group === state.itemFilterGroup)
+      if (state.searchQuery) {
+        const q = state.searchQuery.toLowerCase()
+        result = result.filter(f => f.name.toLowerCase().includes(q))
+      }
+      return result
+    },
 
     categoriesForGroup: (state) => (group) => {
       return [...new Set(
@@ -154,6 +179,8 @@ export const useTechStore = defineStore('tech', {
         selectedTech: null,
         selectedItem: null,
         highlightPath: null,
+        currentView: 'techs',
+        itemFilterGroup: null,
       })
     },
 
@@ -205,6 +232,19 @@ export const useTechStore = defineStore('tech', {
     clearFilter() {
       this.filterGroup = null
       this.filterCategory = null
+    },
+
+    setView(v) {
+      this.currentView = v
+      this.itemFilterGroup = null
+      this.selectedTech = null
+      this.selectedItem = null
+      this.highlightPath = null
+      this.searchQuery = ''
+    },
+
+    setItemFilterGroup(group) {
+      this.itemFilterGroup = this.itemFilterGroup === group ? null : group
     }
   }
 })

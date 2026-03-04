@@ -43,5 +43,10 @@
   "res_ammo_full": "Боєприпаси",
   "legend_title": "Ресурси",
   "total_cost": "Загалом",
-  "empire_bonuses": "Бонуси для імперії"
+  "empire_bonuses": "Бонуси для імперії",
+  "view_techs": "Технології",
+  "view_components": "Компоненти",
+  "view_facilities": "Споруди",
+  "all_items": "Всі",
+  "unlock_status": "Статус"
 }

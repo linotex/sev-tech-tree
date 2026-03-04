@@ -43,5 +43,10 @@
   "res_ammo_full": "Ammo",
   "legend_title": "Resources",
   "total_cost": "Total",
-  "empire_bonuses": "Empire Bonuses"
+  "empire_bonuses": "Empire Bonuses",
+  "view_techs": "Technologies",
+  "view_components": "Components",
+  "view_facilities": "Facilities",
+  "all_items": "All",
+  "unlock_status": "Status"
 }

@@ -62,8 +62,8 @@
       </div>
     </template>
 
-    <!-- Groups & Categories (normal mode) -->
-    <template v-else>
+    <!-- Tech Groups & Categories -->
+    <template v-else-if="store.currentView === 'techs'">
       <div class="filter-section">
         <div
           class="group-item"
@@ -97,6 +97,32 @@
             </div>
           </template>
         </template>
+      </div>
+    </template>
+
+    <!-- Item Groups (components / facilities) -->
+    <template v-else>
+      <div class="filter-section">
+        <div
+          class="group-item"
+          :class="{ active: !store.itemFilterGroup }"
+          @click="store.setItemFilterGroup(null)"
+        >
+          <span class="dot" :style="{ background: itemColor }" />
+          {{ t('all_items') }}
+          <span class="cnt">{{ itemCount }}</span>
+        </div>
+        <div
+          v-for="group in itemGroups"
+          :key="group"
+          class="group-item"
+          :class="{ active: store.itemFilterGroup === group }"
+          @click="store.setItemFilterGroup(group)"
+        >
+          <span class="dot" :style="{ background: itemColor }" />
+          {{ group }}
+          <span class="cnt">{{ groupItemCount(group) }}</span>
+        </div>
       </div>
     </template>
 
@@ -181,6 +207,21 @@ const researchedCount = computed(() =>
 const progressPct = computed(() =>
   Math.round((researchedCount.value / store.techs.length) * 100)
 )
+
+// Item browser mode helpers
+const itemColor = computed(() =>
+  store.currentView === 'components' ? '#34d399' : '#fb923c'
+)
+const itemGroups = computed(() =>
+  store.currentView === 'components' ? store.componentGroups : store.facilityGroups
+)
+const itemCount = computed(() =>
+  store.currentView === 'components' ? store.components.length : store.facilities.length
+)
+function groupItemCount(group) {
+  const list = store.currentView === 'components' ? store.components : store.facilities
+  return list.filter(i => i.group === group).length
+}
 </script>
 
 <style scoped>
