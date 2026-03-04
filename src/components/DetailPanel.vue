@@ -81,9 +81,9 @@
         </div>
         <div class="cost-label">
           {{ t('cost_per_level') }}: <strong>{{ tech.costPerLevel.toLocaleString() }}</strong> RP
-          <span v-if="currentLevel > 0" class="cost-total">
-            · {{ t('total_cost') }}: <strong>{{ (currentLevel * tech.costPerLevel).toLocaleString() }}</strong> RP
-          </span>
+          <div v-if="currentLevel > 0" class="cost-total">
+            {{ t('total_cost') }}: <strong>{{ (currentLevel * tech.costPerLevel).toLocaleString() }}</strong> RP
+          </div>
         </div>
       </div>
 
@@ -340,7 +340,7 @@ function toggleItem(name) {
 }
 .level-pip.filled { background: var(--accent); border-color: var(--accent); }
 .cost-label { font-size: 12px; color: var(--text-dim); }
-.cost-total { color: var(--accent-dim); margin-left: 4px; }
+.cost-total { font-size: 12px; color: var(--accent-dim); margin-top: 5px; }
 
 .section { display: flex; flex-direction: column; gap: 4px; }
 .section-title { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 4px; }
