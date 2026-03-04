@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1] — 2026-03-04
+
+### Fixed
+- Detail panel: components and facilities now show all their tech requirements, not just the connection to the currently selected tech
+- "Unlocks technologies" section also shows additional requirements for each unlocked tech
+- Tech graph canvas re-renders correctly when moving window between displays with different DPI
+- Mac build: ad-hoc codesign + quarantine strip for portable distribution
+
 ## [1.3.0] — 2026-03-04
 
 ### Added

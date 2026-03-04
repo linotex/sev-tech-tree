@@ -141,10 +141,21 @@
             class="unlock-item"
             @click="store.selectTech(ut)"
           >
-            {{ ut.name }}
-            <span class="req-level-badge" :class="{ unlocked: currentLevel >= ut.reqLevel }">
-              lvl {{ ut.reqLevel }}
-            </span>
+            <div class="unlock-main">
+              {{ ut.name }}
+              <span class="req-level-badge" :class="{ unlocked: currentLevel >= ut.reqLevel }">
+                lvl {{ ut.reqLevel }}
+              </span>
+            </div>
+            <div
+              v-for="req in ut.requirements.filter(r => r.tech !== tech.name)"
+              :key="req.tech"
+              class="unlock-also-req"
+              :class="{ met: store.getResearchedLevel(req.tech) >= req.level }"
+              @click.stop="goToTech(req.tech)"
+            >
+              + {{ req.tech }} lvl {{ req.level }}
+            </div>
           </div>
         </div>
 
@@ -163,6 +174,12 @@
                 lvl {{ c.reqLevel }}
               </span>
             </div>
+            <div
+              v-for="req in c.requirements.filter(r => r.tech !== tech.name)"
+              :key="req.tech"
+              class="unlock-also-req"
+              :class="{ met: store.getResearchedLevel(req.tech) >= req.level }"
+            >+ {{ req.tech }} lvl {{ req.level }}</div>
             <template v-if="expandedItems[c.name]">
               <div v-if="c.description" class="item-desc">{{ c.description }}</div>
               <ItemStats :item="c" :level="techEffectiveLevel(c)" :show-fuel="true" />
@@ -185,6 +202,12 @@
                 lvl {{ f.reqLevel }}
               </span>
             </div>
+            <div
+              v-for="req in f.requirements.filter(r => r.tech !== tech.name)"
+              :key="req.tech"
+              class="unlock-also-req"
+              :class="{ met: store.getResearchedLevel(req.tech) >= req.level }"
+            >+ {{ req.tech }} lvl {{ req.level }}</div>
             <template v-if="expandedItems[f.name]">
               <div v-if="f.description" class="item-desc">{{ f.description }}</div>
               <ItemStats :item="f" :level="techEffectiveLevel(f)" :show-fuel="false" />
@@ -436,9 +459,18 @@ function toggleItem(name) {
 .unlock-item {
   padding: 6px 10px; background: var(--bg-card); border-radius: 6px;
   font-size: 13px; cursor: pointer; transition: background 0.1s;
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; flex-direction: column; gap: 3px;
 }
 .unlock-item:hover { background: var(--bg-hover); color: var(--accent); }
+.unlock-main {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.unlock-also-req {
+  font-size: 11px;
+  color: var(--text-dim);
+  padding-left: 4px;
+}
+.unlock-also-req.met { color: var(--green); }
 
 .item-card {
   padding: 7px 10px; background: var(--bg-card); border-radius: 6px;

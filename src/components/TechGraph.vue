@@ -237,8 +237,28 @@ function panHome() {
 watch(filteredTechs, rebuildGraph, { deep: true })
 watch([selectedTech, highlightPath, researchedLevels], applyHighlight, { deep: true })
 
-onMounted(initCy)
-onUnmounted(() => cy?.destroy())
+let dpiCleanup = null
+
+function watchDPI() {
+  const mq = window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`)
+  const handler = () => {
+    cy?.resize()
+    dpiCleanup?.()
+    dpiCleanup = watchDPI()
+  }
+  mq.addEventListener('change', handler, { once: true })
+  return () => mq.removeEventListener('change', handler)
+}
+
+onMounted(() => {
+  initCy()
+  dpiCleanup = watchDPI()
+})
+
+onUnmounted(() => {
+  dpiCleanup?.()
+  cy?.destroy()
+})
 </script>
 
 <style scoped>
