@@ -30,8 +30,12 @@
     "directories": { "output": "release" },
     "files": ["dist/**", "dist-electron/**"],
     "mac": {
-      "target": "dir"
+      "target": "dir",
+      "identity": null,
+      "gatekeeperAssess": false,
+      "hardenedRuntime": false
     },
+    "afterPack": "./scripts/afterPack.js",
     "win": {
       "target": "portable"
     }
