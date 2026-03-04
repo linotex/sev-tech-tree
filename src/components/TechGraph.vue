@@ -2,9 +2,7 @@
   <div class="graph-wrap">
     <div ref="cyEl" class="cy-container" />
     <div class="graph-controls">
-      <button @click="fitView" title="Вписати у вікно">⊞</button>
-      <button @click="zoom(1.2)" title="Збільшити">+</button>
-      <button @click="zoom(0.8)" title="Зменшити">−</button>
+      <button @click="panHome" title="На початок">⌂</button>
     </div>
   </div>
 </template>
@@ -74,8 +72,19 @@ function initCy() {
     elements: buildElements(filteredTechs.value),
     style: getCyStyle(),
     layout: { name: 'dagre', rankDir: 'LR', nodeSep: 40, rankSep: 120, padding: 30 },
-    wheelSensitivity: 0.3
+    zoom: 1,
+    userZoomingEnabled: false,
+    minZoom: 1,
+    maxZoom: 1,
   })
+
+  panHome()
+
+  // Wheel → pan (no zoom)
+  cyEl.value.addEventListener('wheel', (e) => {
+    e.preventDefault()
+    cy.panBy({ x: -e.deltaX, y: -e.deltaY })
+  }, { passive: false })
 
   cy.on('tap', 'node', (evt) => {
     const techName = evt.target.id()
@@ -210,12 +219,20 @@ function rebuildGraph() {
   if (!cy) { initCy(); return }
   cy.elements().remove()
   cy.add(buildElements(filteredTechs.value))
-  cy.layout({ name: 'dagre', rankDir: 'LR', nodeSep: 40, rankSep: 120, padding: 30 }).run()
-  applyHighlight()
+  const layout = cy.layout({ name: 'dagre', rankDir: 'LR', nodeSep: 40, rankSep: 120, padding: 30 })
+  cy.one('layoutstop', () => { panHome(); applyHighlight() })
+  layout.run()
 }
 
-function fitView() { cy?.fit(undefined, 30) }
-function zoom(factor) { cy?.zoom({ level: cy.zoom() * factor, renderedPosition: { x: cyEl.value.clientWidth / 2, y: cyEl.value.clientHeight / 2 } }) }
+// Pan so the left edge of the graph is visible with padding, vertically centred
+function panHome() {
+  if (!cy || !cyEl.value) return
+  const bb = cy.elements().boundingBox()
+  cy.pan({
+    x: 30 - bb.x1,
+    y: cyEl.value.clientHeight / 2 - (bb.y1 + bb.h / 2)
+  })
+}
 
 watch(filteredTechs, rebuildGraph, { deep: true })
 watch([selectedTech, highlightPath, researchedLevels], applyHighlight, { deep: true })

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1] — 2026-03-04
+
+### Changed
+- Tech tree graph: zoom disabled, fixed 1:1 scale
+- Mouse wheel / trackpad scroll pans the graph (vertical + horizontal)
+- Drag-to-pan still available; ⌂ button resets view to start
+
 ## [1.2.0] — 2026-03-04
 
 ### Added
