@@ -296,18 +296,38 @@ def parse_vehicle_sizes() -> list[dict]:
 
         req_count = int(b.get('Количество требований', 0))
         tech_req = None
+        design_reqs = []
         for i in range(1, req_count + 1):
             formula = b.get(f'Формула требований {i}', '')
             result = get_req_from_formula(formula)
             if result:
-                tech_req = {'tech': result[0], 'level': result[1]}
-                break
+                if tech_req is None:
+                    tech_req = {'tech': result[0], 'level': result[1]}
+            else:
+                desc = b.get(f'Описание требования {i}', '').strip()
+                if desc:
+                    design_reqs.append(desc)
+
+        ab_count = int(b.get('Количество способностей', 0))
+        abilities = []
+        for i in range(1, ab_count + 1):
+            ab_type = b.get(f'Тип способности {i}', '').strip()
+            ab_desc = b.get(f'Описание способности {i}', '').strip()
+            if ab_desc:
+                abilities.append({
+                    'type':        ab_type,
+                    'description': ab_desc,
+                    'amount1':     b.get(f'Способность {i} - Формула количества 1', '0').strip(),
+                    'amount2':     b.get(f'Способность {i} - Формула количества 2', '0').strip(),
+                })
 
         sizes.append({
             'name': name,
             'shipType': b.get('Тип корабля', '').strip(),
             'maxLevel': int(b.get('Максимальный уровень', 1)),
             'techReq': tech_req,
+            'designReqs': design_reqs,
+            'abilities': abilities,
             'formulas': {
                 'tonnage':       b.get('Формула грузового места', '0').strip(),
                 'structure':     b.get('Формула структуры груза', '0').strip(),

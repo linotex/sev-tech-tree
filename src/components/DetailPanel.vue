@@ -46,6 +46,24 @@
               <span class="req-level">lvl {{ store.selectedItem.data.techReq.level }}</span>
             </div>
           </div>
+          <div v-if="store.selectedItem.data.designReqs?.length" class="section">
+            <div class="section-title">{{ t('design_reqs') }}</div>
+            <div v-for="(req, i) in store.selectedItem.data.designReqs" :key="i" class="design-req">
+              {{ req }}
+            </div>
+          </div>
+          <div v-if="store.selectedItem.data.abilities?.length" class="section">
+            <div class="section-title">{{ t('stat_abilities') }}</div>
+            <div class="abilities">
+              <div
+                v-for="(ab, i) in store.selectedItem.data.abilities"
+                :key="i"
+                class="ability-line"
+              >
+                {{ renderAbilityDesc(ab, vehicleCurrentLevel || 1) }}
+              </div>
+            </div>
+          </div>
         </template>
 
         <!-- Component / Facility stats -->
@@ -541,5 +559,21 @@ function toggleItem(name) {
 .description-box {
   background: var(--bg-card); border-radius: 8px; padding: 12px;
   font-size: 13px; color: var(--text-dim); line-height: 1.6;
+}
+
+.design-req {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  padding: 4px 10px;
+  background: var(--bg-card);
+  border-radius: 5px;
+  border-left: 2px solid var(--border);
+}
+
+.abilities {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 </style>

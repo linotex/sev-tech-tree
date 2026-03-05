@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.4.0] — 2026-03-05
+
+### Added
+- Ships tab: design requirements and abilities (buffs/debuffs) now shown in ship detail panel
+- Parser: vehicle sizes now include `designReqs` and `abilities` fields from VehicleSizes.txt
+
 ## [1.3.1] — 2026-03-04
 
 ### Fixed

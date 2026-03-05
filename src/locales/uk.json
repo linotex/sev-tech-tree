@@ -31,14 +31,14 @@
   "stat_weapon": "Зброя",
   "stat_damage": "Пошкодження",
   "stat_pt_blank": "впритул",
-  "res_min":  "Мін",
-  "res_org":  "Орг",
-  "res_rad":  "Рад",
+  "res_min": "Мін",
+  "res_org": "Орг",
+  "res_rad": "Рад",
   "res_fuel": "Пал",
   "res_ammo": "Бп",
-  "res_min_full":  "Мінерали",
-  "res_org_full":  "Органіка",
-  "res_rad_full":  "Радіоактивні",
+  "res_min_full": "Мінерали",
+  "res_org_full": "Органіка",
+  "res_rad_full": "Радіоактивні",
   "res_fuel_full": "Паливо",
   "res_ammo_full": "Боєприпаси",
   "legend_title": "Ресурси",
@@ -51,5 +51,6 @@
   "all_items": "Всі",
   "unlock_status": "Статус",
   "unlocks_vehicles": "Розміри кораблів",
-  "stat_tonnage_short": "т"
+  "stat_tonnage_short": "т",
+  "design_reqs": "Вимоги до конструкції"
 }

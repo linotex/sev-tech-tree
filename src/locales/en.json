@@ -31,14 +31,14 @@
   "stat_weapon": "Weapon",
   "stat_damage": "Damage",
   "stat_pt_blank": "pt. blank",
-  "res_min":  "Min",
-  "res_org":  "Org",
-  "res_rad":  "Rad",
+  "res_min": "Min",
+  "res_org": "Org",
+  "res_rad": "Rad",
   "res_fuel": "Fuel",
   "res_ammo": "Ammo",
-  "res_min_full":  "Minerals",
-  "res_org_full":  "Organics",
-  "res_rad_full":  "Radioactives",
+  "res_min_full": "Minerals",
+  "res_org_full": "Organics",
+  "res_rad_full": "Radioactives",
   "res_fuel_full": "Fuel",
   "res_ammo_full": "Ammo",
   "legend_title": "Resources",
@@ -51,5 +51,6 @@
   "all_items": "All",
   "unlock_status": "Status",
   "unlocks_vehicles": "Ship sizes",
-  "stat_tonnage_short": "t"
+  "stat_tonnage_short": "t",
+  "design_reqs": "Design requirements"
 }
