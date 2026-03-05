@@ -54,36 +54,7 @@ resources/
 
 ### 1. Add UI translations
 
-Create `src/locales/<code>.json` by copying `en.json` and translating the values:
-
-```json
-{
-  "stat_techs": "technologies",
-  "stat_researched": "researched",
-  "btn_research": "○ Research",
-  "btn_researched": "✓ Researched",
-  "btn_reset": "↺ Reset",
-  "btn_reset_title": "Reset progress",
-  "confirm_reset": "Reset all research progress?",
-  "search_placeholder": "Search: tech, component, facility...",
-  "label_techs": "Technologies",
-  "label_components": "Components",
-  "label_facilities": "Facilities",
-  "no_results": "Nothing found",
-  "all_groups": "All groups",
-  "progress_title": "Research Progress",
-  "type_component": "Component",
-  "type_facility": "Facility",
-  "req_techs": "Required technologies",
-  "no_tech_req": "No technologies required",
-  "research_level": "Research level",
-  "cost_per_level": "Cost per level",
-  "requires": "Requires",
-  "unlocks_techs": "Unlocks technologies",
-  "no_deps": "No dependencies or unlocked items for level 1.",
-  "click_hint": "Click a technology in the graph or search for a component"
-}
-```
+Copy `src/locales/en.json` to `src/locales/<code>.json` and translate the values.
 
 ### 2. Register the locale in i18n.js
 
