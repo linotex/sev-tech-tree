@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.5.0] — 2026-03-05
+
+### Added
+- Tech detail panel: tech icon (36×36 sprite) shown next to tech name in header
+- Tech detail panel: tech icons shown in "Unlocks technologies" list
+- Tech detail panel: component thumbnails (32×32) shown in components list
+- Component detail panel: full 512×512 image shown at top of detail panel
+- Image asset pipeline: scripts/copy_images.py copies game images to src/public/images/
+- Parser: imageNum added to tech_tree JSON, portrait added to vehicle_sizes JSON
+
 ## [1.4.0] — 2026-03-05
 
 ### Added

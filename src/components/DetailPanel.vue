@@ -13,6 +13,9 @@
         </div>
         <button class="close-btn" @click="store.selectItem(null)">✕</button>
       </div>
+      <div v-if="itemImageUrl" class="item-image-wrap">
+        <img :src="itemImageUrl" class="item-image" alt="" @error="e => e.target.style.display='none'" />
+      </div>
       <div class="panel-body">
         <div v-if="store.selectedItem.data.description" class="description-box">
           {{ store.selectedItem.data.description }}
@@ -96,7 +99,10 @@
     <!-- Tech view -->
     <template v-else-if="tech">
       <div class="panel-header">
-        <div class="tech-title">{{ tech.name }}</div>
+        <div class="tech-header-row">
+          <div v-if="tech.imageNum" class="tech-icon-sprite" :style="techIconStyle(tech.imageNum)" />
+          <div class="tech-title">{{ tech.name }}</div>
+        </div>
         <div class="tech-meta">
           <span class="badge" :style="{ background: groupColor(tech.group) + '33', color: groupColor(tech.group) }">
             {{ tech.group }}
@@ -160,7 +166,8 @@
             @click="store.selectTech(ut)"
           >
             <div class="unlock-main">
-              {{ ut.name }}
+              <div v-if="ut.imageNum" class="list-icon-sprite" :style="techIconStyle(ut.imageNum)" />
+              <span class="unlock-name">{{ ut.name }}</span>
               <span class="req-level-badge" :class="{ unlocked: currentLevel >= ut.reqLevel }">
                 lvl {{ ut.reqLevel }}
               </span>
@@ -187,7 +194,8 @@
             @click="toggleItem(c.name)"
           >
             <div class="item-name">
-              {{ c.name }}
+              <img v-if="c.imageNum" :src="compIconUrl(c.imageNum)" class="list-comp-icon" alt="" @error="e => e.target.style.display='none'" />
+              <span class="item-name-text">{{ c.name }}</span>
               <span class="req-level-badge" :class="{ unlocked: currentLevel >= c.reqLevel }">
                 lvl {{ c.reqLevel }}
               </span>
@@ -349,6 +357,36 @@ const vehicleCurrentLevel = computed(() => {
   return store.getResearchedLevel(v.techReq.tech)
 })
 
+// Image URL for the selected item (component / facility / vehicle)
+const itemImageUrl = computed(() => {
+  const item = store.selectedItem
+  if (!item) return null
+  if (item.type === 'component' && item.data.imageNum)
+    return `/images/components/${String(item.data.imageNum).padStart(3, '0')}.jpg`
+  return null
+})
+
+function compIconUrl(imageNum) {
+  if (!imageNum) return null
+  return `/images/components/${String(imageNum).padStart(3, '0')}.jpg`
+}
+
+// CSS style for a tech icon sprite (36×36 grid, 14 cols)
+function techIconStyle(imageNum) {
+  const idx = imageNum - 1
+  const col = idx % 14
+  const row = Math.floor(idx / 14)
+  return {
+    backgroundImage: "url('/images/tech_icons.png')",
+    backgroundPosition: `-${col * 36}px -${row * 36}px`,
+    backgroundRepeat: 'no-repeat',
+    width: '36px',
+    height: '36px',
+    flexShrink: '0',
+    imageRendering: 'pixelated',
+  }
+}
+
 // Level to use when showing stats for components/facilities under a tech.
 // Use max(currentLevel, reqLevel) so a component that requires lvl 3
 // never shows stats below lvl 3, even if tech is not yet researched that far.
@@ -481,7 +519,7 @@ function toggleItem(name) {
 }
 .unlock-item:hover { background: var(--bg-hover); color: var(--accent); }
 .unlock-main {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center; justify-content: space-between; gap: 6px;
 }
 .unlock-also-req {
   font-size: 11px;
@@ -559,6 +597,63 @@ function toggleItem(name) {
 .description-box {
   background: var(--bg-card); border-radius: 8px; padding: 12px;
   font-size: 13px; color: var(--text-dim); line-height: 1.6;
+}
+
+.item-image-wrap {
+  width: 100%;
+  background: #000;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.item-image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  max-height: 240px;
+}
+
+.tech-header-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding-right: 24px;
+}
+.tech-header-row .tech-title {
+  margin-bottom: 0;
+  padding-right: 0;
+}
+.tech-icon-sprite {
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.list-icon-sprite {
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.unlock-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-comp-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.item-name-text {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .design-req {

@@ -7,6 +7,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 29,
     "requirements": []
   },
   {
@@ -17,6 +18,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 30,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -32,6 +34,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 31,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -47,6 +50,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 32,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -62,6 +66,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 33,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -77,6 +82,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 34,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -92,6 +98,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 35,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -107,6 +114,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 37,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -122,6 +130,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 38,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -137,6 +146,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 41,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -152,6 +162,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 43,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -167,6 +178,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 44,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -182,6 +194,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 45,
     "requirements": [
       {
         "tech": "Изучение культуры",
@@ -197,6 +210,7 @@
     "costPerLevel": 50000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 1,
     "requirements": []
   },
   {
@@ -207,6 +221,7 @@
     "costPerLevel": 50000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 2,
     "requirements": []
   },
   {
@@ -217,6 +232,7 @@
     "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 3,
     "requirements": []
   },
   {
@@ -227,6 +243,7 @@
     "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 4,
     "requirements": []
   },
   {
@@ -237,6 +254,7 @@
     "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 5,
     "requirements": []
   },
   {
@@ -247,6 +265,7 @@
     "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 6,
     "requirements": []
   },
   {
@@ -257,6 +276,7 @@
     "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 7,
     "requirements": []
   },
   {
@@ -267,6 +287,7 @@
     "costPerLevel": 100000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 8,
     "requirements": []
   },
   {
@@ -277,6 +298,7 @@
     "costPerLevel": 30000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 9,
     "requirements": []
   },
   {
@@ -287,6 +309,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 10,
     "requirements": []
   },
   {
@@ -297,6 +320,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 11,
     "requirements": []
   },
   {
@@ -307,6 +331,7 @@
     "costPerLevel": 40000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 12,
     "requirements": []
   },
   {
@@ -317,6 +342,7 @@
     "costPerLevel": 75000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 13,
     "requirements": []
   },
   {
@@ -327,6 +353,7 @@
     "costPerLevel": 50000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 14,
     "requirements": []
   },
   {
@@ -337,6 +364,7 @@
     "costPerLevel": 200000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 16,
     "requirements": []
   },
   {
@@ -347,6 +375,7 @@
     "costPerLevel": 200000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 17,
     "requirements": []
   },
   {
@@ -357,6 +386,7 @@
     "costPerLevel": 200000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 18,
     "requirements": []
   },
   {
@@ -367,6 +397,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 20,
     "requirements": []
   },
   {
@@ -377,6 +408,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 139,
     "requirements": []
   },
   {
@@ -387,6 +419,7 @@
     "costPerLevel": 8000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 140,
     "requirements": [
       {
         "tech": "Стр-во легких корпусов",
@@ -402,6 +435,7 @@
     "costPerLevel": 11000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 141,
     "requirements": [
       {
         "tech": "Стр-во ср. и легких корпусов",
@@ -417,6 +451,7 @@
     "costPerLevel": 14000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 142,
     "requirements": [
       {
         "tech": "Стр-во средних корпусов",
@@ -432,6 +467,7 @@
     "costPerLevel": 17000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 143,
     "requirements": [
       {
         "tech": "Стр-во ср. и тяжелых корпусов",
@@ -447,6 +483,7 @@
     "costPerLevel": 20000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 144,
     "requirements": [
       {
         "tech": "Стр-во тяжелых корпусов",
@@ -462,6 +499,7 @@
     "costPerLevel": 8000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 19,
     "requirements": []
   },
   {
@@ -472,6 +510,7 @@
     "costPerLevel": 16000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 137,
     "requirements": [
       {
         "tech": "Строительство базы",
@@ -487,6 +526,7 @@
     "costPerLevel": 23000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 138,
     "requirements": [
       {
         "tech": "Стр-во огромных корпусов",
@@ -506,6 +546,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 22,
     "requirements": []
   },
   {
@@ -516,6 +557,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 23,
     "requirements": []
   },
   {
@@ -526,6 +568,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 24,
     "requirements": [
       {
         "tech": "Стр-во",
@@ -541,6 +584,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 25,
     "requirements": [
       {
         "tech": "Стр-во",
@@ -556,6 +600,7 @@
     "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 26,
     "requirements": []
   },
   {
@@ -566,6 +611,7 @@
     "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 27,
     "requirements": []
   },
   {
@@ -576,6 +622,7 @@
     "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 28,
     "requirements": []
   },
   {
@@ -586,6 +633,7 @@
     "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 47,
     "requirements": []
   },
   {
@@ -596,6 +644,7 @@
     "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 48,
     "requirements": []
   },
   {
@@ -606,6 +655,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 49,
     "requirements": [
       {
         "tech": "Стр-во",
@@ -621,6 +671,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 50,
     "requirements": [
       {
         "tech": "Промышленность",
@@ -636,6 +687,7 @@
     "costPerLevel": 100000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 51,
     "requirements": [
       {
         "tech": "Физика",
@@ -651,6 +703,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 52,
     "requirements": []
   },
   {
@@ -661,6 +714,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 53,
     "requirements": [
       {
         "tech": "Планетарная инженерия",
@@ -676,6 +730,7 @@
     "costPerLevel": 20000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 54,
     "requirements": [
       {
         "tech": "Химия",
@@ -691,6 +746,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 55,
     "requirements": []
   },
   {
@@ -701,6 +757,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 56,
     "requirements": []
   },
   {
@@ -711,6 +768,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 57,
     "requirements": []
   },
   {
@@ -721,6 +779,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 58,
     "requirements": []
   },
   {
@@ -731,6 +790,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 59,
     "requirements": []
   },
   {
@@ -741,6 +801,7 @@
     "costPerLevel": 5000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 60,
     "requirements": []
   },
   {
@@ -751,6 +812,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 145,
     "requirements": [
       {
         "tech": "Ионные двигатели",
@@ -766,6 +828,7 @@
     "costPerLevel": 15000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 146,
     "requirements": [
       {
         "tech": "Антиматер. двигатели",
@@ -781,6 +844,7 @@
     "costPerLevel": 20000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 147,
     "requirements": [
       {
         "tech": "Фотонные двигатели",
@@ -796,6 +860,7 @@
     "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 62,
     "requirements": []
   },
   {
@@ -806,6 +871,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 63,
     "requirements": [
       {
         "tech": "Физика",
@@ -821,6 +887,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 64,
     "requirements": [
       {
         "tech": "Физика",
@@ -836,6 +903,7 @@
     "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 65,
     "requirements": []
   },
   {
@@ -846,6 +914,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 66,
     "requirements": [
       {
         "tech": "Физика",
@@ -861,6 +930,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 68,
     "requirements": [
       {
         "tech": "Промышленность",
@@ -876,6 +946,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 69,
     "requirements": [
       {
         "tech": "Военная наука",
@@ -891,6 +962,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 133,
     "requirements": []
   },
   {
@@ -901,6 +973,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 71,
     "requirements": [
       {
         "tech": "Орудийные модули",
@@ -916,6 +989,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 72,
     "requirements": [
       {
         "tech": "Орудийные модули",
@@ -931,6 +1005,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 73,
     "requirements": [
       {
         "tech": "Орудийные модули",
@@ -946,6 +1021,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 74,
     "requirements": [
       {
         "tech": "Органическая инженерия",
@@ -961,6 +1037,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 75,
     "requirements": [
       {
         "tech": "Изучение психики",
@@ -976,6 +1053,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 76,
     "requirements": [
       {
         "tech": "Изучение религии",
@@ -991,6 +1069,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 77,
     "requirements": [
       {
         "tech": "Изучение времени",
@@ -1006,6 +1085,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 78,
     "requirements": [
       {
         "tech": "Кристаллургия",
@@ -1021,6 +1101,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 81,
     "requirements": [
       {
         "tech": "Астрофизика",
@@ -1036,6 +1117,7 @@
     "costPerLevel": 100000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 80,
     "requirements": [
       {
         "tech": "Астрофизика",
@@ -1051,6 +1133,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 83,
     "requirements": []
   },
   {
@@ -1061,6 +1144,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 152,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1076,6 +1160,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 151,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1091,6 +1176,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 149,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1106,6 +1192,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 150,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1121,6 +1208,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 156,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1136,6 +1224,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 155,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1151,6 +1240,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 153,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1166,6 +1256,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 154,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1181,6 +1272,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 148,
     "requirements": [
       {
         "tech": "Службы разведки",
@@ -1196,6 +1288,7 @@
     "costPerLevel": 10000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 86,
     "requirements": []
   },
   {
@@ -1206,6 +1299,7 @@
     "costPerLevel": 8000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 87,
     "requirements": [
       {
         "tech": "Военная наука",
@@ -1221,6 +1315,7 @@
     "costPerLevel": 8000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 88,
     "requirements": [
       {
         "tech": "Психология",
@@ -1236,6 +1331,7 @@
     "costPerLevel": 100000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 89,
     "requirements": []
   },
   {
@@ -1246,6 +1342,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 90,
     "requirements": []
   },
   {
@@ -1256,6 +1353,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 92,
     "requirements": [
       {
         "tech": "Физика",
@@ -1271,6 +1369,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 93,
     "requirements": [
       {
         "tech": "Физика",
@@ -1286,6 +1385,7 @@
     "costPerLevel": 3000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 94,
     "requirements": []
   },
   {
@@ -1296,6 +1396,7 @@
     "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 126,
     "requirements": [
       {
         "tech": "Химия",
@@ -1311,6 +1412,7 @@
     "costPerLevel": 2000,
     "startLevel": 1,
     "isUnique": false,
+    "imageNum": 95,
     "requirements": []
   },
   {
@@ -1321,6 +1423,7 @@
     "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 96,
     "requirements": [
       {
         "tech": "Военная наука",
@@ -1336,6 +1439,7 @@
     "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 97,
     "requirements": [
       {
         "tech": "Антиматер. двигатели",
@@ -1351,6 +1455,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 98,
     "requirements": [
       {
         "tech": "Физика",
@@ -1366,6 +1471,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 99,
     "requirements": [
       {
         "tech": "Военная наука",
@@ -1381,6 +1487,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 100,
     "requirements": [
       {
         "tech": "Силовое поле",
@@ -1396,6 +1503,7 @@
     "costPerLevel": 3000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 101,
     "requirements": [
       {
         "tech": "Астрофизика",
@@ -1411,6 +1519,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 102,
     "requirements": [
       {
         "tech": "Астрофизика",
@@ -1426,6 +1535,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 103,
     "requirements": [
       {
         "tech": "Ионные двигатели",
@@ -1441,6 +1551,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 104,
     "requirements": [
       {
         "tech": "Астрофизика",
@@ -1456,6 +1567,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 105,
     "requirements": [
       {
         "tech": "Физика",
@@ -1471,6 +1583,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 106,
     "requirements": [
       {
         "tech": "Компьютеры",
@@ -1486,6 +1599,7 @@
     "costPerLevel": 7000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 107,
     "requirements": [
       {
         "tech": "Астрофизика",
@@ -1501,6 +1615,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 108,
     "requirements": [
       {
         "tech": "Военная наука",
@@ -1516,6 +1631,7 @@
     "costPerLevel": 7000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 109,
     "requirements": [
       {
         "tech": "Биология",
@@ -1531,6 +1647,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 110,
     "requirements": []
   },
   {
@@ -1541,6 +1658,7 @@
     "costPerLevel": 10000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 111,
     "requirements": [
       {
         "tech": "Десант",
@@ -1556,6 +1674,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 112,
     "requirements": []
   },
   {
@@ -1566,6 +1685,7 @@
     "costPerLevel": 2000,
     "startLevel": 0,
     "isUnique": false,
+    "imageNum": 113,
     "requirements": []
   },
   {
@@ -1576,6 +1696,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 117,
     "requirements": [
       {
         "tech": "Изучение времени",
@@ -1591,6 +1712,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 118,
     "requirements": [
       {
         "tech": "Изучение психики",
@@ -1606,6 +1728,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 119,
     "requirements": [
       {
         "tech": "Органическая инженерия",
@@ -1621,6 +1744,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 120,
     "requirements": [
       {
         "tech": "Кристаллургия",
@@ -1636,6 +1760,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 121,
     "requirements": []
   },
   {
@@ -1646,6 +1771,7 @@
     "costPerLevel": 5000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 122,
     "requirements": []
   },
   {
@@ -1656,6 +1782,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 123,
     "requirements": []
   },
   {
@@ -1666,6 +1793,7 @@
     "costPerLevel": 4000,
     "startLevel": 0,
     "isUnique": true,
+    "imageNum": 124,
     "requirements": []
   }
 ]

@@ -121,6 +121,7 @@ def parse_tech_areas() -> list[dict]:
             'costPerLevel': cost,
             'startLevel': start_level,
             'isUnique': is_unique,
+            'imageNum': int(b.get('Номер изображения', 0)),
             'requirements': requirements,
         })
 
@@ -321,11 +322,15 @@ def parse_vehicle_sizes() -> list[dict]:
                     'amount2':     b.get(f'Способность {i} - Формула количества 2', '0').strip(),
                 })
 
+        raw_portrait = b.get('Изображение инвентаря транспортного средства - Основное', '').strip()
+        portrait = raw_portrait.replace('[%EmpireName%]', 'Default') if raw_portrait else None
+
         sizes.append({
             'name': name,
             'shipType': b.get('Тип корабля', '').strip(),
             'maxLevel': int(b.get('Максимальный уровень', 1)),
             'techReq': tech_req,
+            'portrait': portrait,
             'designReqs': design_reqs,
             'abilities': abilities,
             'formulas': {
