@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.6.0] — 2026-03-05
+
+### Added
+- Ships: resource cost table (minerals, organics, radioactives) per level in detail panel
+
+### Fixed
+- Vehicle tonnage levels now show correct tech levels (e.g. Large Fighter shows 7-9, not 1-3)
+- Weapon damage formulas with Cyrillic Мин()/Макс() now evaluate correctly
+- Component and tech icons now load correctly in packaged app (relative image paths)
+- Components and facilities sorted alphabetically in browser; ships sorted by tonnage
+
 ## [1.5.0] — 2026-03-05
 
 ### Added

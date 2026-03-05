@@ -25,17 +25,30 @@
         <template v-if="store.selectedItem.type === 'vehicle'">
           <div class="section">
             <div class="section-title">{{ t('stat_size') }}</div>
-            <div class="vehicle-stats">
-              <div
-                v-for="lvl in store.selectedItem.data.maxLevel"
-                :key="lvl"
-                class="vehicle-row"
-                :class="{ current: lvl === vehicleCurrentLevel }"
-              >
-                <span class="vlvl">{{ lvl }}</span>
-                <span class="vstat">{{ evalFormula(store.selectedItem.data.formulas.tonnage, lvl) }}{{ t('stat_tonnage_short') }}</span>
-              </div>
-            </div>
+            <table class="vehicle-table">
+              <thead>
+                <tr>
+                  <th>{{ t('stat_level_prefix') }}</th>
+                  <th>{{ t('stat_tonnage_short') }}</th>
+                  <th>{{ t('res_min') }}</th>
+                  <th>{{ t('res_org') }}</th>
+                  <th>{{ t('res_rad') }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="lvl in vehicleLevels"
+                  :key="lvl.display"
+                  :class="{ current: lvl.display === vehicleCurrentLevel }"
+                >
+                  <td class="td-lvl">{{ lvl.display }}</td>
+                  <td>{{ evalFormula(store.selectedItem.data.formulas.tonnage, lvl.local) }}</td>
+                  <td class="td-min">{{ evalFormula(store.selectedItem.data.formulas.minerals, lvl.local) }}</td>
+                  <td class="td-org">{{ evalFormula(store.selectedItem.data.formulas.organics, lvl.local) }}</td>
+                  <td class="td-rad">{{ evalFormula(store.selectedItem.data.formulas.radioactives, lvl.local) }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
           <div v-if="store.selectedItem.data.techReq" class="section">
             <div class="section-title">{{ t('req_techs') }}</div>
@@ -288,9 +301,9 @@
             </div>
             <template v-if="expandedItems['v:' + v.name]">
               <div class="vehicle-stats">
-                <div v-for="lvl in v.maxLevel" :key="lvl" class="vehicle-row" :class="{ current: lvl === currentLevel }">
-                  <span class="vlvl">{{ lvl }}</span>
-                  <span class="vstat">{{ evalFormula(v.formulas.tonnage, lvl) }}{{ t('stat_tonnage_short') }}</span>
+                <div v-for="lvl in techVehicleLevels(v)" :key="lvl.display" class="vehicle-row" :class="{ current: lvl.display === currentLevel }">
+                  <span class="vlvl">{{ lvl.display }}</span>
+                  <span class="vstat">{{ evalFormula(v.formulas.tonnage, lvl.local) }}{{ t('stat_tonnage_short') }}</span>
                 </div>
               </div>
             </template>
@@ -357,18 +370,31 @@ const vehicleCurrentLevel = computed(() => {
   return store.getResearchedLevel(v.techReq.tech)
 })
 
+// Actual tech levels for a vehicle: from techReq.level to techReq.level + maxLevel - 1
+const vehicleLevels = computed(() => {
+  const d = store.selectedItem?.data
+  if (!d) return []
+  const start = d.techReq?.level ?? 1
+  return Array.from({ length: d.maxLevel }, (_, i) => ({ display: start + i, local: i + 1 }))
+})
+
+function techVehicleLevels(v) {
+  const start = v.techReq?.level ?? 1
+  return Array.from({ length: v.maxLevel }, (_, i) => ({ display: start + i, local: i + 1 }))
+}
+
 // Image URL for the selected item (component / facility / vehicle)
 const itemImageUrl = computed(() => {
   const item = store.selectedItem
   if (!item) return null
   if (item.type === 'component' && item.data.imageNum)
-    return `/images/components/${String(item.data.imageNum).padStart(3, '0')}.jpg`
+    return `./images/components/${String(item.data.imageNum).padStart(3, '0')}.jpg`
   return null
 })
 
 function compIconUrl(imageNum) {
   if (!imageNum) return null
-  return `/images/components/${String(imageNum).padStart(3, '0')}.jpg`
+  return `./images/components/${String(imageNum).padStart(3, '0')}.jpg`
 }
 
 // CSS style for a tech icon sprite (36×36 grid, 14 cols)
@@ -377,7 +403,7 @@ function techIconStyle(imageNum) {
   const col = idx % 14
   const row = Math.floor(idx / 14)
   return {
-    backgroundImage: "url('/images/tech_icons.png')",
+    backgroundImage: "url('./images/tech_icons.png')",
     backgroundPosition: `-${col * 36}px -${row * 36}px`,
     backgroundRepeat: 'no-repeat',
     width: '36px',
@@ -571,7 +597,7 @@ function toggleItem(name) {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  margin-top: 8px;
+  margin-top: 6px;
 }
 .vehicle-row {
   display: flex;
@@ -584,15 +610,42 @@ function toggleItem(name) {
   font-size: 11px;
   color: var(--text-dim);
 }
-.vehicle-row.current {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-.vlvl {
-  font-weight: 600;
-  min-width: 14px;
-}
+.vehicle-row.current { border-color: var(--accent); color: var(--accent); }
+.vlvl { font-weight: 600; min-width: 14px; }
 .vstat { color: inherit; }
+
+.vehicle-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 6px;
+}
+.vehicle-table th {
+  text-align: right;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  padding: 3px 6px;
+  border-bottom: 1px solid var(--border);
+}
+.vehicle-table th:first-child { text-align: left; }
+.vehicle-table td {
+  text-align: right;
+  padding: 4px 6px;
+  color: var(--text-dim);
+  border-bottom: 1px solid var(--bg-hover);
+}
+.vehicle-table td:first-child { text-align: left; font-weight: 600; }
+.vehicle-table tr.current td { color: var(--accent); background: #0d1f2d; }
+.td-lvl { color: var(--text) !important; }
+.td-min { color: #94a3b8 !important; }
+.td-org { color: #34d399 !important; }
+.td-rad { color: #fb923c !important; }
+.vehicle-table tr.current .td-min,
+.vehicle-table tr.current .td-org,
+.vehicle-table tr.current .td-rad { opacity: 0.9; }
 
 .description-box {
   background: var(--bg-card); border-radius: 8px; padding: 12px;

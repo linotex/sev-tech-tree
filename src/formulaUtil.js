@@ -9,8 +9,8 @@ export function evalFormula(formula, level, range = 0) {
   const expr = formula
     .replace(/\[%Level%\]/g, level)
     .replace(/\[%Range%\]/g, range)
-    .replace(/\bМин\b/g, 'Math.min')
-    .replace(/\bМакс\b/g, 'Math.max')
+    .replace(/Мин\(/g, 'Math.min(')
+    .replace(/Макс\(/g, 'Math.max(')
     .replace(/\biif\s*\(/gi, '_iif(')
 
   try {

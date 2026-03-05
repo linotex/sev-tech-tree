@@ -76,11 +76,15 @@ const store = useTechStore()
 
 const isVehicle = computed(() => props.type === 'vehicle')
 
-const items = computed(() =>
-  props.type === 'component' ? store.filteredComponents
-  : props.type === 'facility' ? store.filteredFacilities
-  : store.filteredVehicleSizes
-)
+const items = computed(() => {
+  if (props.type === 'component') {
+    return store.filteredComponents.slice().sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }))
+  }
+  if (props.type === 'facility') {
+    return store.filteredFacilities.slice().sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }))
+  }
+  return store.filteredVehicleSizes
+})
 
 const groupColor = computed(() =>
   props.type === 'component' ? '#34d399' : props.type === 'facility' ? '#fb923c' : '#60a5fa'
@@ -91,11 +95,21 @@ const groupKey = (item) => isVehicle.value ? item.shipType : item.group
 
 const visibleGroups = computed(() => {
   const seen = new Set()
-  return items.value.map(i => groupKey(i)).filter(g => seen.has(g) ? false : seen.add(g))
+  const groups = items.value.map(i => groupKey(i)).filter(g => seen.has(g) ? false : seen.add(g))
+  if (!isVehicle.value) groups.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
+  return groups
 })
 
 function itemsInGroup(group) {
-  return items.value.filter(i => groupKey(i) === group)
+  const filtered = items.value.filter(i => groupKey(i) === group)
+  if (isVehicle.value) {
+    return filtered.slice().sort((a, b) => {
+      const ta = evalFormula(a.formulas.tonnage, 1) ?? 0
+      const tb = evalFormula(b.formulas.tonnage, 1) ?? 0
+      return ta - tb
+    })
+  }
+  return filtered.slice().sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }))
 }
 
 function isUnlocked(item) {
