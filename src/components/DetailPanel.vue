@@ -473,7 +473,7 @@ function toggleItem(name) {
   display: flex;
   flex-direction: column;
 }
-.detail-panel.open { width: 300px; min-width: 300px; }
+.detail-panel.open { width: 320px; min-width: 320px; }
 
 .empty-panel { display: flex; align-items: center; justify-content: center; height: 100%; }
 .empty-hint { color: var(--text-dim); font-size: 13px; text-align: center; padding: 20px; }

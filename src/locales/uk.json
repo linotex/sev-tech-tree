@@ -52,5 +52,8 @@
   "unlock_status": "Статус",
   "unlocks_vehicles": "Розміри кораблів",
   "stat_tonnage_short": "т",
-  "design_reqs": "Вимоги до конструкції"
+  "design_reqs": "Вимоги до конструкції",
+  "stat_vehicle_types": "Встановлюється на",
+  "stat_reload": "Перезарядка",
+  "stat_reload_unit": "с"
 }

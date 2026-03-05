@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.7.0] — 2026-03-05
+
+### Added
+- Component detail panel: weapon reload time (seconds) shown next to damage
+- Component detail panel: "Installable on" section listing compatible vehicle types
+
+### Changed
+- Detail panel width increased from 300px to 320px
+- Removed "(point blank)" label from damage display
+- Reload time value highlighted in magenta color
+
 ## [1.6.0] — 2026-03-05
 
 ### Added

@@ -30,12 +30,21 @@
       </div>
     </div>
 
-    <!-- Weapon damage -->
+    <!-- Vehicle types -->
+    <div v-if="item.vehicleTypes?.length" class="vehicle-types-row">
+      <span class="stat-label">{{ t('stat_vehicle_types') }}</span>
+      <span v-for="vt in item.vehicleTypes" :key="vt" class="vtype-chip">{{ vt }}</span>
+    </div>
+
+    <!-- Weapon damage + reload -->
     <div v-if="item.weapon && (minDmg !== null || maxDmg !== null)" class="weapon-row">
       <span class="stat-label">{{ t('stat_damage') }}</span>
       <span class="dmg-value">
         {{ minDmg === maxDmg ? minDmg : `${minDmg}–${maxDmg}` }}
-        <span class="dmg-note">({{ t('stat_pt_blank') }})</span>
+      </span>
+      <span v-if="reloadMoves !== null" class="reload-value">
+        <span class="stat-label">{{ t('stat_reload') }}</span>
+        <span class="reload-number">{{ reloadMoves }} {{ t('stat_reload_unit') }}</span>
       </span>
     </div>
   </div>
@@ -73,6 +82,13 @@ const minDmg = computed(() =>
 const maxDmg = computed(() =>
   props.item.weapon ? evalFormula(props.item.weapon.maxDamageFormula, l.value, 0) : null
 )
+const reloadMoves = computed(() => {
+  const f = props.item.weapon?.reloadFormula
+  if (!f) return null
+  const v = evalFormula(f, l.value, 0)
+  if (!v) return null
+  return v / 1000
+})
 </script>
 
 <style scoped>
@@ -160,10 +176,44 @@ const maxDmg = computed(() =>
   color: #f87171;
   font-weight: 600;
   font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
 }
 .dmg-note {
   font-size: 10px;
   color: var(--text-dim);
   font-weight: 400;
+}
+.reload-value {
+  margin-left: 4px;
+  font-size: 12px;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.reload-number {
+  color: #d946a8;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.vehicle-types-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.vtype-chip {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--bg-deep);
+  color: var(--text-dim);
 }
 </style>

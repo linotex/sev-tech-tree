@@ -52,5 +52,8 @@
   "unlock_status": "Status",
   "unlocks_vehicles": "Ship sizes",
   "stat_tonnage_short": "t",
-  "design_reqs": "Design requirements"
+  "design_reqs": "Design requirements",
+  "stat_vehicle_types": "Installable on",
+  "stat_reload": "Reload",
+  "stat_reload_unit": "s"
 }

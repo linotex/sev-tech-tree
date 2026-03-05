@@ -174,6 +174,7 @@ def parse_components() -> list[dict]:
         weapon_type = b.get('Тип оружия', 'Нет').strip()
         weapon = None
         if weapon_type and weapon_type != 'Нет':
+            reload_raw = b.get('Формула скорости перезарядки вооружения', '').strip()
             weapon = {
                 'type': weapon_type,
                 'delivery': b.get('Тип доставки оружия', '').strip(),
@@ -182,13 +183,18 @@ def parse_components() -> list[dict]:
                     'Космическое вооружение - Формула модификатора мин. повреждений', '').strip(),
                 'maxDamageFormula': b.get(
                     'Космическое вооружение - Формула модификатора макс. повреждений', '').strip(),
+                'reloadFormula': reload_raw,
             }
+
+        vehicle_types_raw = b.get('Может быть помещен на типы транспортных средств', '').strip()
+        vehicle_types = [v.strip() for v in vehicle_types_raw.split(',')] if vehicle_types_raw else []
 
         components.append({
             'name': name,
             'description': b.get('Описание', '').strip(),
             'group': b.get('Общая группа', '').strip(),
             'imageNum': int(b.get('Номер изображения', 0)),
+            'vehicleTypes': vehicle_types,
             'maxLevel': int(b.get('Максимальный уровень', 1)),
             'formulas': {
                 'size':          b.get('Формула занимаемого в тоннаже места', '0').strip(),
