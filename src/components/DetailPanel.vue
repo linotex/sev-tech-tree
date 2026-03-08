@@ -330,7 +330,7 @@ import { computed, reactive, watch } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useTechStore } from '../stores/techStore'
 import { t } from '../i18n.js'
-import { evalFormula, renderAbilityDesc, effectiveLevel } from '../formulaUtil.js'
+import { evalFormula, renderAbilityDesc } from '../formulaUtil.js'
 import ItemStats from './ItemStats.vue'
 
 const store = useTechStore()
@@ -414,11 +414,13 @@ function techIconStyle(imageNum) {
 }
 
 // Level to use when showing stats for components/facilities under a tech.
-// Use max(currentLevel, reqLevel) so a component that requires lvl 3
-// never shows stats below lvl 3, even if tech is not yet researched that far.
+// Component level = (current tech level - base req level + 1), clamped to [1, maxLevel].
+// e.g. a component requiring tech >= 20 shows level 1 stats when tech is at 20.
 function techEffectiveLevel(item) {
-  const minLevel = item.reqLevel || 1
-  return effectiveLevel(item, Math.max(currentLevel.value || 1, minLevel))
+  const base = item.reqLevel || 1
+  const techLevel = Math.max(currentLevel.value || 1, base)
+  const compLevel = techLevel - base + 1
+  return Math.max(1, Math.min(compLevel, item.maxLevel || 1))
 }
 
 // Level to use when showing a standalone selectedItem (from search)
@@ -427,8 +429,13 @@ const selectedItemLevel = computed(() => {
   if (!data) return 1
   const reqs = data.requirements || []
   if (!reqs.length) return 1
-  const researched = Math.max(...reqs.map(r => store.getResearchedLevel(r.tech)))
-  return effectiveLevel(data, researched || 1)
+  let best = 1
+  for (const req of reqs) {
+    const techLevel = store.getResearchedLevel(req.tech) || 0
+    const compLevel = Math.max(1, Math.min(techLevel - req.level + 1, data.maxLevel || 1))
+    if (compLevel > best) best = compLevel
+  }
+  return best
 })
 
 const unlocksTechs = computed(() => {

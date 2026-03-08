@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.8.0] — 2026-03-08
+
+### Fixed
+- Component stats now display correct values when the tech requirement base level is > 1 (e.g. Quantum Reactor requires Supply Replenishment lvl 20 — now correctly shows level 1 stats instead of level 20 stats)
+
 ## [1.7.0] — 2026-03-05
 
 ### Added
